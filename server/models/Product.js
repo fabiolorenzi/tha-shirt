@@ -30,10 +30,11 @@ const ProductSchema = new mongoose.Schema({
         required: true
     },
     pusblished_date: {
-        type: Date
+        type: Date,
     },
     update_date: {
-        type: Date
+        type: Date,
+        default: Date.now
     },
     image: {
         type: String,
