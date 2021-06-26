@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,OAAO,CAAC;EACJ,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,CAAC;EACT,gBAAgB,ECNX,OAAO;CDYf;;AAVD,AAKI,OALG,CAKH,GAAG,CAAC;EACA,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,MAAM;EACjB,eAAe,EAAE,YAAY;CAChC",
+    "sources": [
+        "Header.scss",
+        "../../shared/stylesheets/var.scss"
+    ],
+    "names": [],
+    "file": "Header.css"
+}

@@ -1,0 +1,17 @@
+.header {
+  display: block;
+  width: 100%;
+  margin: 0;
+  background-color: #000000;
+}
+
+.header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+/*# sourceMappingURL=Header.css.map */
