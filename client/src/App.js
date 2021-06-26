@@ -1,10 +1,12 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
+import Header from "./components/Header/Header.jsx";
+
 function App() {
     return(
         <div className="app">
-            <h1>Hello World</h1>
+            <Header />
             <Switch>
             </Switch>
         </div>
