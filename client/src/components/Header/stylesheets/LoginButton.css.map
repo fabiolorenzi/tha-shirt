@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,qBAAqB,CAAC;EAClB,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,WAAW;CACrB;;AAED,AAAA,aAAa,CAAC;EACV,OAAO,EAAE,KAAK;EACd,gBAAgB,ECLX,OAAO;CDaf;;AAVD,AAGI,aAHS,CAGT,EAAE,CAAC;EACC,KAAK,ECXJ,OAAO;EDYR,SAAS,EAAE,IAAI;CAClB;;AANL,AAOI,aAPS,CAOT,GAAG,CAAC;EACA,KAAK,EAAE,IAAI;CACd",
+    "sources": [
+        "LoginButton.scss",
+        "../../shared/stylesheets/var.scss"
+    ],
+    "names": [],
+    "file": "LoginButton.css"
+}

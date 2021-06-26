@@ -1,0 +1,21 @@
+.loginButtonContainer {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.login_button {
+  display: block;
+  background-color: #555555;
+}
+
+.login_button h3 {
+  color: #000000;
+  font-size: 15px;
+}
+
+.login_button img {
+  width: 25px;
+}
+/*# sourceMappingURL=LoginButton.css.map */
