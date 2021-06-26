@@ -27,7 +27,7 @@ router.put("/:id", (req, res) => {
         .catch(err => res.status(400).json({error: `${err} not updated correctly`}))
 });
 
-router.remove(":/id", (req, res) => {
+router.delete(":/id", (req, res) => {
     User.findByIdAndRemove(req.params.id, req.body)
         .then(user => res.json({msg: `${user} removed successfully`}))
         .catch(err => res.status(404).json({error: `Unable to remove ${err}`}))

@@ -10,7 +10,7 @@ const app = express();
 connectDB();
 
 app.use(cors({origin: true, credentials: true}));
-app.use(express.join({extended: false}));
+app.use(express.json({extended: false}));
 app.get("/", (req, res) => res.send("The server is working"));
 app.use("/api/products", products);
 app.use("/api/users", users);
