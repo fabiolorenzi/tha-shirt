@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,2BAA2B,CAAC;EACxB,OAAO,EAAE,KAAK;CACjB",
+    "sources": [
+        "LanguageSelection.scss",
+        "../../shared/stylesheets/var.scss"
+    ],
+    "names": [],
+    "file": "LanguageSelection.css"
+}
