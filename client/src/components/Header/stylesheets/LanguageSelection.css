@@ -1,4 +1,17 @@
 .languageSelectionContainer {
   display: block;
+  width: 25%;
+}
+
+.languageSelectionContainer select {
+  height: 35px;
+  width: 150px;
+  margin: auto;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.languageSelectionContainer select option {
+  font-weight: 600;
 }
 /*# sourceMappingURL=LanguageSelection.css.map */
