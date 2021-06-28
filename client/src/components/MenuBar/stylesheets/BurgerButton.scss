@@ -1,0 +1,11 @@
+@import "../../shared/stylesheets/var.scss";
+
+.burgerButton {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .burgerButton {
+        display: block;
+    }
+}

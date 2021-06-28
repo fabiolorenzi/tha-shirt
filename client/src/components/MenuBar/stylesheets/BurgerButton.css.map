@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,aAAa,CAAC;EACV,OAAO,EAAE,IAAI;CAChB;;AAED,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;EACpC,AAAA,aAAa,CAAC;IACV,OAAO,EAAE,KAAK;GACjB",
+    "sources": [
+        "BurgerButton.scss",
+        "../../shared/stylesheets/var.scss"
+    ],
+    "names": [],
+    "file": "BurgerButton.css"
+}
