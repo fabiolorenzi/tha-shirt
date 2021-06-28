@@ -27,4 +27,41 @@
 .basket_button img {
   width: 25px;
 }
+
+@media only screen and (max-width: 860px) {
+  .basket_button {
+    width: 100px;
+  }
+  .basket_button h3 {
+    font-size: 12px;
+  }
+  .basket_button img {
+    width: 20px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .basket_button {
+    width: 80px;
+  }
+  .basket_button h3 {
+    font-size: 8px;
+  }
+  .basket_button img {
+    width: 18px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .basket_button {
+    width: 50px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .basket_button {
+    width: 40px;
+    padding: 5px;
+  }
+}
 /*# sourceMappingURL=BasketButton.css.map */

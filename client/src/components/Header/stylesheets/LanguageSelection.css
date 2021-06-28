@@ -1,6 +1,7 @@
 .languageSelectionContainer {
   display: block;
   width: 25%;
+  padding: 8px;
 }
 
 .languageSelectionContainer select {
@@ -13,5 +14,36 @@
 
 .languageSelectionContainer select option {
   font-weight: 600;
+}
+
+@media only screen and (max-width: 860px) {
+  .languageSelectionContainer select {
+    height: 30px;
+    width: 100px;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .languageSelectionContainer select {
+    height: 28px;
+    width: 80px;
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .languageSelectionContainer select {
+    width: 60px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .languageSelectionContainer {
+    padding: 3px;
+  }
+  .languageSelectionContainer select {
+    width: 50px;
+  }
 }
 /*# sourceMappingURL=LanguageSelection.css.map */

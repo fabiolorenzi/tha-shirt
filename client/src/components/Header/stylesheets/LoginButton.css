@@ -27,4 +27,44 @@
 .login_button img {
   width: 25px;
 }
+
+@media only screen and (max-width: 860px) {
+  .login_button {
+    width: 100px;
+  }
+  .login_button h3 {
+    font-size: 12px;
+  }
+  .login_button img {
+    width: 20px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .login_button {
+    width: 80px;
+  }
+  .login_button h3 {
+    font-size: 8px;
+  }
+  .login_button img {
+    width: 18px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .login_button {
+    width: 50px;
+  }
+  .login_button h3 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .login_button {
+    width: 40px;
+    padding: 5px;
+  }
+}
 /*# sourceMappingURL=LoginButton.css.map */
