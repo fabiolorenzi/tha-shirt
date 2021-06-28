@@ -19,14 +19,14 @@
   .burgerButton div:last-child {
     margin-bottom: 0;
   }
-  #buttonOpen {
+  #burgerOpen {
     -webkit-transform: rotate(450deg);
             transform: rotate(450deg);
     -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s;
     background-color: #000000;
   }
-  #buttonClosed {
+  #burgerClosed {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     -webkit-transition-duration: 0.5s;

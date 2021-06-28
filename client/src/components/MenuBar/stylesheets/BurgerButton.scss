@@ -22,13 +22,13 @@
         }
     }
 
-    #buttonOpen {
+    #burgerOpen {
         transform: rotate(450deg);
         transition-duration: 0.5s;
         background-color: $color1;
     }
 
-    #buttonClosed {
+    #burgerClosed {
         transform: rotate(0deg);
         transition-duration: 0.5s;
         background-color: $color3;

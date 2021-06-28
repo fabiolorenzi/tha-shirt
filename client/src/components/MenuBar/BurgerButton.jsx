@@ -10,7 +10,7 @@ function BurgerButton() {
     };
 
     return(
-        <div className="burgerButton" data-testid="burgerButton" onClick={opener} id={open ? "buttonOpen" : "buttonClosed"}>
+        <div className="burgerButton" data-testid="burgerButton" onClick={opener} id={open ? "burgerOpen" : "burgerClosed"}>
             <div className="burgerLine" data-testid="fBurgerLine"></div>
             <div className="burgerLine" data-testid="sBurgerLine"></div>
             <div className="burgerLine" data-testid="tBurgerLine"></div>
