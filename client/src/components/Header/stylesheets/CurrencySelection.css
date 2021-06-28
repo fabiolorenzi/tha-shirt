@@ -1,4 +1,17 @@
 .currencySelectionContainer {
   display: block;
+  width: 25%;
+}
+
+.currencySelectionContainer select {
+  height: 35px;
+  width: 150px;
+  margin: auto;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.currencySelectionContainer select option {
+  font-weight: 600;
 }
 /*# sourceMappingURL=CurrencySelection.css.map */
