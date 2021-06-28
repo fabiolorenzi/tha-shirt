@@ -1,0 +1,28 @@
+@import "../../shared/stylesheets/var.scss";
+
+.basketButtonContainer {
+    display: block;
+    width: 25%;
+    padding: 8px;
+    a {
+        text-decoration: none;
+    }
+}
+
+.basket_button {
+    display: block;
+    background-color: $color2;
+    padding: 5px;
+    border-radius: 3px;
+    width: 150px;
+    h3 {
+        color: $color1;
+        font-size: 15px;
+        margin-right: 10px;
+        margin-top: 4px;
+        text-decoration: none;
+    }
+    img {
+        width: 25px;
+    }
+}

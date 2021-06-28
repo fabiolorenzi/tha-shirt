@@ -4,6 +4,7 @@ import "./stylesheets/Header.css";
 import LoginButton from "./LoginButton.jsx";
 import LanguageSelection from "./LanguageSelection.jsx";
 import CurrencySelection from "./CurrencySelection.jsx";
+import BasketButton from "./BasketButton.jsx";
 
 function Header() {
     return(
@@ -11,6 +12,7 @@ function Header() {
             <LoginButton />
             <LanguageSelection />
             <CurrencySelection />
+            <BasketButton />
         </div>
     );
 };
