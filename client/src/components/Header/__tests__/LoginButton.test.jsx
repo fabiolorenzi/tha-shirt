@@ -28,7 +28,7 @@ test("Container renders successfully", () => {
 });
 
 test("Button will render properly", () => {
-    expect(button.className).toBe("login_button");
+    expect(button.className).toContain("login_button");
 });
 
 test("Username renders correctly", () => {
