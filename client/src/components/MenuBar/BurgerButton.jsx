@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import "./stylesheets/BurgerButton.css";
 
 function BurgerButton() {
-    const [open, setopen] = useState(false);
+    const [open, setOpen] = useState(false);
 
     function opener(e) {
         e.preventDefault();
-        setopen(!open);
+        setOpen(!open);
     };
 
     return(
-        <div className="burgerButton" data-testid="burgerButton" onClick={opener}>
+        <div className="burgerButton" data-testid="burgerButton" onClick={opener} id={open ? "buttonOpen" : "buttonClosed"}>
             <div className="burgerLine" data-testid="fBurgerLine"></div>
             <div className="burgerLine" data-testid="sBurgerLine"></div>
             <div className="burgerLine" data-testid="tBurgerLine"></div>
