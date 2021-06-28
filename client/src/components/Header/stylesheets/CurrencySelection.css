@@ -1,7 +1,7 @@
 .currencySelectionContainer {
   display: block;
   width: 25%;
-  padding: 8px;
+  padding: 10px;
 }
 
 .currencySelectionContainer select {

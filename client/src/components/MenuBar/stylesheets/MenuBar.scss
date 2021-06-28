@@ -5,5 +5,11 @@
     flex-wrap: nowrap;
     width: 100%;
     position: fixed;
-    margin-top: 51.5px;
+    margin-top: 55.5px;
+}
+
+@media only screen and (max-width: 860px) {
+    .menuBarContainer {
+        margin-top: 50.5px;
+    }
 }
