@@ -12,15 +12,27 @@ import Image5 from "../../img/roller_image_05.jpg";
 function ImageRoller() {
     return(
         <div className="imageRollerContainer" data-testid="imageRollerContainer">
-            <AliceCarousel /*autoPlay*/ autoPlayInterval="3000" infinite="true">
+            <AliceCarousel autoPlay autoPlayInterval="4000" infinite="true">
                 <div className="sliderimg">
-                    <h1>helloooooo</h1>
+                    <h1>All our shops soon open! Stay ready!</h1>
                     <img src={Image1} alt="first" />
                 </div>
-                <img src={Image2} alt="first" className="sliderimg" />
-                <img src={Image3} alt="first" className="sliderimg" />
-                <img src={Image4} alt="first" className="sliderimg" />
-                <img src={Image5} alt="first" className="sliderimg" />
+                <div className="sliderimg">
+                    <h1>Summer discount! Enjoy the best time of the year</h1>
+                    <img src={Image2} alt="first" />
+                </div>
+                <div className="sliderimg">
+                    <h1>All the best clothes for the best parties!</h1>
+                    <img src={Image3} alt="first" />
+                </div>
+                <div className="sliderimg">
+                    <h1>Be quick! The special discount is just for this July!</h1>
+                    <img src={Image4} alt="first" />
+                </div>
+                <div className="sliderimg">
+                    <h1>Clothes for every occasion!</h1>
+                    <img src={Image5} alt="first" />
+                </div>
             </AliceCarousel>
         </div>
     );
