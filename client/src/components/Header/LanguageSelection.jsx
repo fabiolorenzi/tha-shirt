@@ -5,6 +5,7 @@ function LanguageSelection() {
     const langSel = e => {
         e.preventDefault();
         localStorage.setItem("lang", e.target.value);
+        window.location.reload();
     };
 
     return(

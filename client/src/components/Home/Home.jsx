@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./stylesheets/Home.css";
 
 function Home() {
+    const [delThr, setDelThr] = useState();
+    const currency = localStorage.getItem("currency") || "£";
+
+    useEffect(() => {
+        if (currency === "£") {
+            setDelThr(50);
+        } else if (currency === "€") {
+            setDelThr(58);
+        } else {
+            setDelThr(70);
+        };
+    }, [currency]);
+
     return(
         <div className="homeContainer">
-            <h3>Free delivery from £50!</h3>
+            <h3>Free delivery from {currency}{delThr}!</h3>
         </div>
     );
 };

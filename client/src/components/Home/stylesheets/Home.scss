@@ -2,5 +2,11 @@
 
 .homeContainer {
     display: block;
-    padding-top: 95px;
+    width: 100%;
+    padding-top: 100px;
+    h3 {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 400;
+    }
 }

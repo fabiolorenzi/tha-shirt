@@ -5,6 +5,7 @@ function CurrencySelection() {
     const currencySel = e => {
         e.preventDefault();
         localStorage.setItem("currency", e.target.value);
+        window.location.reload();
     };
 
     return(
