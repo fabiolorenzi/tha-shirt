@@ -1,12 +1,20 @@
 @import "../../shared/stylesheets/var.scss";
+@import "../../shared/stylesheets/openHiddenMenu.scss";
 
 .homeContainer {
     display: block;
     width: 100%;
     padding-top: 100px;
+    background-color: $color2;
+    z-index: 1;
+    @include closedHiddenMenuEffect;
     h3 {
         text-align: center;
         font-size: 15px;
         font-weight: 400;
     }
+}
+
+#openHome {
+    @include openHiddenMenuEffect;
 }

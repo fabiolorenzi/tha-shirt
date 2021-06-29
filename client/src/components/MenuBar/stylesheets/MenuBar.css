@@ -8,6 +8,7 @@
   position: fixed;
   margin-top: 55.5px;
   background-color: #ff9900;
+  z-index: 100;
 }
 
 @media only screen and (max-width: 860px) {
