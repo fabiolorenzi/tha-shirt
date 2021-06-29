@@ -1,12 +1,16 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { open_close } from "../../redux/actions/open_closeAction.js";
 import "./stylesheets/BurgerButton.css";
 
 function BurgerButton() {
+    const dispatch = useDispatch();
     const [open, setOpen] = useState(false);
 
     function opener(e) {
         e.preventDefault();
         setOpen(!open);
+        dispatch(open_close());
     };
 
     return(

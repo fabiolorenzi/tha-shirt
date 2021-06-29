@@ -1,5 +1,9 @@
 import { combineReducers } from "redux";
 
-const rootReducer = combineReducers({});
+import open_closeReducer from "./open_closeReducer.js";
+
+const rootReducer = combineReducers({
+    burgerButtonState: open_closeReducer
+});
 
 export default rootReducer;

@@ -1,8 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "./stylesheets/HiddenMenu.css";
 
 function HiddenMenu() {
+    const burgerButtonState = useSelector(state => state.burgerButtonState);
     const pass = localStorage.getItem("pass") ? "" : "reservedHiddenMenu";
 
     return(
