@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { Helmet } from "react-helmet";
 import "./stylesheets/Home.css";
 
 import ImageRoller from "./ImageRoller.jsx";
@@ -23,6 +24,9 @@ function Home() {
 
     return(
         <div className="homeContainer" id={openBurger}>
+            <Helmet>
+                <title>THA SHIRT | HOME</title>
+            </Helmet>
             <h3>Free delivery from {currency}{delThr}!</h3>
             <ImageRoller />
         </div>

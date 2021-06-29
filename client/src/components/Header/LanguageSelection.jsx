@@ -14,10 +14,10 @@ function LanguageSelection() {
                 onChange={langSel}
                 className="languageSelector"
                 data-testid="selector"
-                defaultValue={localStorage.getItem("lang") ? localStorage.getItem("lang") : "eng"}
+                defaultValue={localStorage.getItem("lang") ? localStorage.getItem("lang") : "en"}
             >
-                <option data-testid="option1" value="eng">English</option>
-                <option data-testid="option2" value="ita">Italiano</option>
+                <option data-testid="option1" value="en">English</option>
+                <option data-testid="option2" value="it">Italiano</option>
             </select>
         </div>
     );
