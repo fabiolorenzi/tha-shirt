@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import "./stylesheets/Home.css";
 
+import ImageRoller from "./ImageRoller.jsx";
+
 function Home() {
     const burgerButtonState = useSelector(state => state.burgerButtonState);
     const [delThr, setDelThr] = useState();
@@ -22,6 +24,7 @@ function Home() {
     return(
         <div className="homeContainer" id={openBurger}>
             <h3>Free delivery from {currency}{delThr}!</h3>
+            <ImageRoller />
         </div>
     );
 };

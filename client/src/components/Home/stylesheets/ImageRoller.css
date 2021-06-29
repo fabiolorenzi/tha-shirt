@@ -1,0 +1,22 @@
+.imageRollerContainer {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.imageRollerContainer .sliderimg {
+  width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.imageRollerContainer .sliderimg img {
+  width: 100%;
+  height: 500px;
+}
+
+.imageRollerContainer .sliderimg h1 {
+  position: absolute;
+}
+/*# sourceMappingURL=ImageRoller.css.map */
