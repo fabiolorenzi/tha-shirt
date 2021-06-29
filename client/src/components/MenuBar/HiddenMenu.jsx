@@ -5,10 +5,13 @@ import "./stylesheets/HiddenMenu.css";
 
 function HiddenMenu() {
     const burgerButtonState = useSelector(state => state.burgerButtonState);
+
     const pass = localStorage.getItem("pass") ? "" : "reservedHiddenMenu";
 
+    const hiddenMenuState = burgerButtonState ? "openHiddenMenu" : "closedHiddenMenu";
+
     return(
-        <div className="hiddenMenuContainer" data-testid="hiddenMenuContainer">
+        <div className="hiddenMenuContainer" id={hiddenMenuState} data-testid="hiddenMenuContainer">
             <NavLink to="/" exact className="hiddenMenu1" activeClassName="activeHiddenMenu" data-testid="link1">HOME</NavLink>
             <NavLink to="/shop" className="hiddenMenu1" activeClassName="activeHiddenMenu" data-testid="link2">SHOP</NavLink>
             <NavLink to="/aboutus" className="hiddenMenu1" activeClassName="activeHiddenMenu" data-testid="link3">ABOUT US</NavLink>
