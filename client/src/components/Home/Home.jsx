@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import "./stylesheets/Home.css";
 
 import ImageRoller from "./ImageRoller.jsx";
+import Logo from "../../img/tha-shirt-logo.png";
 
 function Home() {
     const burgerButtonState = useSelector(state => state.burgerButtonState);
@@ -29,6 +30,15 @@ function Home() {
             </Helmet>
             <h3>Free delivery from {currency}{delThr}!</h3>
             <ImageRoller />
+            <div className="homeBody">
+                <h1>Welcome to THA-SHIRT!</h1>
+                <div className="homeLeft">
+                    <img src={Logo} alt="logo of tha shirt" />
+                </div>
+                <div className="homeRight">
+                    <h1>HOME</h1>
+                </div>
+            </div>
         </div>
     );
 };
