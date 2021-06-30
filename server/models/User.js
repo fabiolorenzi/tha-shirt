@@ -52,6 +52,10 @@ const UserSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
+    },
+    pass: {
+        type: Boolean,
+        required: true
     }
 });
 
