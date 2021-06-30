@@ -73,4 +73,38 @@
 .homeBody .homeRight h3 {
   font-style: italic;
 }
+
+@media only screen and (max-width: 1000px) {
+  .homeBody .homeRight {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .homeBody h1 {
+    font-size: 30px;
+  }
+  .homeBody h2 {
+    font-size: 18px;
+  }
+  .homeBody .homeLeft {
+    display: block;
+    width: 80%;
+    margin: auto;
+  }
+  .homeBody .homeLeft img {
+    width: 80%;
+  }
+  .homeBody .homeRight {
+    display: block;
+    width: 90%;
+    margin: 50px auto 0;
+  }
+  .homeBody .homeRight h1 {
+    font-size: 40px;
+  }
+  .homeBody .homeRight h3 {
+    font-size: 20px;
+  }
+}
 /*# sourceMappingURL=Home.css.map */
