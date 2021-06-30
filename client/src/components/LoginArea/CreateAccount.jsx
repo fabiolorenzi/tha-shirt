@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "./stylesheets/CreateAccount.css";
 
 function CreateAccount() {
-    const history = useHistory();
     const [user, setUser] = useState({
         name: "",
         surname: "",
@@ -28,6 +26,44 @@ function CreateAccount() {
 
     const createUser = e => {
         e.preventDefault();
+        const newUser = {
+            username: user.username,
+            name: user.name,
+            surname: user.surname,
+            birthday: user.birthday,
+            gender: user.gender,
+            nation: user.nation,
+            city: user.city,
+            street: user.street,
+            number: user.number,
+            postal_code: user.postal_code,
+            tel: user.tel,
+            email: user.email,
+            password: user.password,
+            pass: false
+        };
+
+        axios.post("https://localhost:8082/api/users/", newUser)
+            .then(res => {
+                alert(`New user created successfully! Now you can login with the credentials you gave.`);
+                setUser({
+                    name: "",
+                    surname: "",
+                    username: "",
+                    birthday: "",
+                    gender: "",
+                    nation: "",
+                    city: "",
+                    street: "",
+                    number: "",
+                    postal_code: "",
+                    tel: "",
+                    email: "",
+                    password: ""
+                });
+                window.location.reload();
+            })
+            .catch(err => alert(`${err}. Try again.`));
     };
 
     return(

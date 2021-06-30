@@ -23,6 +23,7 @@ function Login() {
                     alert("Login successful!!!");
                     localStorage.setItem("logged", true);
                     localStorage.setItem("username", res.data.username);
+                    localStorage.setItem("pass", res.data.pass);
                     history.push("/");
                 }
             })
