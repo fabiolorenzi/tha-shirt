@@ -24,21 +24,21 @@ function Home() {
     const openBurger = burgerButtonState ? "openHome" : "";
 
     return(
-        <div className="homeContainer" id={openBurger}>
+        <div className="homeContainer" id={openBurger} data-testid="homeContainer">
             <Helmet htmlAttributes={{lang: localStorage.getItem("lang") || "en"}}>
                 <title>THA SHIRT | HOME</title>
             </Helmet>
             <h3>Free delivery from {currency}{delThr}!</h3>
             <ImageRoller />
-            <div className="homeBody">
-                <h1>Welcome to THA-SHIRT!</h1>
-                <h2>The e-commerce for the right clothes!</h2>
-                <div className="homeLeft">
+            <div className="homeBody" data-testid="homeBody">
+                <h1 data-testid="fTitle">Welcome to THA-SHIRT!</h1>
+                <h2 data-testid="fUndertitle">The e-commerce for the right clothes!</h2>
+                <div className="homeLeft" data-testid="homeLeft">
                     <img src={Logo} alt="logo of tha shirt" />
                 </div>
-                <div className="homeRight">
-                    <h1>HOME</h1>
-                    <h3>Welcome</h3>
+                <div className="homeRight" data-testid="homeRight">
+                    <h1 data-testid="rightTitle">HOME</h1>
+                    <h3 data-testid="rightUndertitle">Welcome</h3>
                 </div>
             </div>
         </div>
