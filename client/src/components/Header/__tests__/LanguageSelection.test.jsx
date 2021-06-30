@@ -41,21 +41,21 @@ test("Option2 renders properly", () => {
 });
 
 test("Selector works properly", () => {
-    expect(selector.value).toBe("eng");
+    expect(selector.value).toBe("en");
 
     fireEvent.change(selector, {
         target: {
-            value: "ita"
+            value: "it"
         }
     });
 
-    expect(selector.value).toBe("ita");
+    expect(selector.value).toBe("it");
 
     fireEvent.change(selector, {
         target: {
-            value: "eng"
+            value: "en"
         }
     });
 
-    expect(selector.value).toBe("eng");
+    expect(selector.value).toBe("en");
 });
