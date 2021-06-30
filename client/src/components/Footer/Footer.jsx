@@ -10,7 +10,7 @@ function Footer() {
     return(
         <div className="footerContainer" data-testid="footerContainer" id={openBurger}>
             <div>
-                <p data-testid="footerText">Developed by F. Lorenzi</p>
+                <a href="https://github.com/fabiolorenzi" target="_blank" rel="noreferrer"><p data-testid="footerText">Developed by F. Lorenzi</p></a>
                 <p id="footerRights" data-testid="footerRights">All rights reserved</p>
             </div>
         </div>

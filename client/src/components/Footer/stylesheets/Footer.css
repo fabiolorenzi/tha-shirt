@@ -11,11 +11,27 @@
 
 .footerContainer div {
   padding: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-.footerContainer div p {
+.footerContainer div a {
+  color: #ffffff;
+  text-decoration: none;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.footerContainer div a p {
   font-size: 15px;
   font-style: italic;
+}
+
+.footerContainer div a :hover {
+  color: #ff0000;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .footerContainer div #footerRights {
