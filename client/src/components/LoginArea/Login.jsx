@@ -9,24 +9,29 @@ function Login() {
         email: "",
         password: ""
     });
+    const [users, setUsers] = useState([]);
 
     const handleChange = e => {
         e.preventDefault();
         setLoginData({...loginData, [e.target.name]: e.target.value});
     };
 
-    const loginAction = (e) => {
+    const loginAction = e => {
         e.preventDefault();
-        axios.get("https://localhost:8082/api/users/")
-            .then(res => {
-                if (res.data.email === loginData.email && res.data.password === loginData.password) {
+        axios.get("http://localhost:8082/api/users/")
+            .then(res => setUsers(res.data))
+            .then(users.forEach(user => {
+                if (user.email === loginData.email && user.password === loginData.password) {
                     alert("Login successful!!!");
                     localStorage.setItem("logged", true);
-                    localStorage.setItem("username", res.data.username);
-                    localStorage.setItem("pass", res.data.pass);
+                    localStorage.setItem("username", user.username);
+                    localStorage.setItem("pass", user.pass);
+                    localStorage.setItem("id", user._id);
                     history.push("/");
-                }
-            })
+                } else {
+                    alert("Password or email not correct! Please try again.");
+                };
+            }))
             .catch(err => {
                 alert("User not found or data inserted incorrect");
                 setLoginData({...loginData, password: ""});
