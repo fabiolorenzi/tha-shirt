@@ -18,3 +18,46 @@
 #openHome {
     @include openHiddenMenuEffect;
 }
+
+.homeBody {
+    display: block;
+    width: 100%;
+    h1 {
+        font-size: 40px;
+        letter-spacing: 0.2em;
+        text-align: center;
+    }
+    h2 {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 80px;
+        font-style: italic;
+    }
+    div {
+        vertical-align: top;
+    }
+    .homeLeft {
+        display: inline-block;
+        width: 40%;
+        img {
+            display: block;
+            margin: auto;
+            width: 50%;
+        }
+    }
+    .homeRight {
+        display: inline-block;
+        margin-top: 50px;
+        width: 60%;
+        h1 {
+            font-size: 30px;
+            font-style: italic;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        h3 {
+            font-style: italic;
+        }
+    }
+}

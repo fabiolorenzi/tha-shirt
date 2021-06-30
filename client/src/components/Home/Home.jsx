@@ -32,11 +32,13 @@ function Home() {
             <ImageRoller />
             <div className="homeBody">
                 <h1>Welcome to THA-SHIRT!</h1>
+                <h2>The e-commerce for the right clothes!</h2>
                 <div className="homeLeft">
                     <img src={Logo} alt="logo of tha shirt" />
                 </div>
                 <div className="homeRight">
                     <h1>HOME</h1>
+                    <h3>Welcome</h3>
                 </div>
             </div>
         </div>
