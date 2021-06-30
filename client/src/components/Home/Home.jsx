@@ -24,7 +24,7 @@ function Home() {
 
     return(
         <div className="homeContainer" id={openBurger}>
-            <Helmet>
+            <Helmet htmlAttributes={{lang: localStorage.getItem("lang") || "en"}}>
                 <title>THA SHIRT | HOME</title>
             </Helmet>
             <h3>Free delivery from {currency}{delThr}!</h3>
