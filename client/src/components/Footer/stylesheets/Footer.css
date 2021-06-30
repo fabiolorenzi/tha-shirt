@@ -4,6 +4,23 @@
           filter: birghtness(100%);
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+  width: 100%;
+  background-color: #555555;
+  color: #ffffff;
+  margin-top: 100px;
+}
+
+.footerContainer div {
+  padding: 40px;
+}
+
+.footerContainer div p {
+  font-size: 15px;
+  font-style: italic;
+}
+
+.footerContainer div #footerRights {
+  font-size: 14px;
 }
 
 #openFooter {
@@ -11,5 +28,17 @@
           filter: brightness(50%);
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+}
+
+@media only screen and (max-width: 500px) {
+  .footerContainer div {
+    padding: 28px;
+  }
+  .footerContainer div p {
+    font-size: 13px;
+  }
+  .footerContainer div #footerRights {
+    font-size: 12px;
+  }
 }
 /*# sourceMappingURL=Footer.css.map */

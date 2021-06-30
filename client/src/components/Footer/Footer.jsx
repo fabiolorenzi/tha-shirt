@@ -8,7 +8,12 @@ function Footer() {
     const openBurger = burgerState ? "openFooter" : "";
 
     return(
-        <div className="footerContainer" data-testid="footerContainer" id={openBurger}></div>
+        <div className="footerContainer" data-testid="footerContainer" id={openBurger}>
+            <div>
+                <p data-testid="footerText">Developed by F. Lorenzi</p>
+                <p id="footerRights" data-testid="footerRights">All rights reserved</p>
+            </div>
+        </div>
     );
 };
 
