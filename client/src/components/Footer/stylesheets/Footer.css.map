@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,gBAAgB,CAAC;EACb,OAAO,EAAE,KAAK;EEEd,MAAM,EAAE,gBAAgB;EACxB,mBAAmB,EAAE,IAAI;CFD5B;;AAED,AAAA,WAAW,CAAC;EEPR,MAAM,EAAE,eAAe;EACvB,mBAAmB,EAAE,IAAI;CFQ5B",
+    "sources": [
+        "Footer.scss",
+        "../../shared/stylesheets/var.scss",
+        "../../shared/stylesheets/openHiddenMenu.scss"
+    ],
+    "names": [],
+    "file": "Footer.css"
+}
