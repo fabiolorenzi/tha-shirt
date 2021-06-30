@@ -34,6 +34,7 @@ function Login() {
 
     return(
         <div className="loginContainer">
+            <h1>Login</h1>
             <form noValidate onSubmit={loginAction}>
                 <label htmlFor="email">Email</label>
                 <input type="email" name="email" value={loginData.email} onChange={handleChange} />
