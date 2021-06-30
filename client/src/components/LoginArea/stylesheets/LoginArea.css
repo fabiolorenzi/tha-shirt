@@ -1,0 +1,9 @@
+.loginAreaContainer {
+  display: block;
+  width: 100%;
+  padding-top: 100px;
+  background-color: #ffffff;
+  z-index: 1;
+  padding-bottom: 100px;
+}
+/*# sourceMappingURL=LoginArea.css.map */
