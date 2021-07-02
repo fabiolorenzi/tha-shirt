@@ -28,6 +28,7 @@ function Login() {
                     localStorage.setItem("pass", user.pass);
                     localStorage.setItem("id", user._id);
                     history.push("/");
+                    window.location.reload();
                 } else {
                     alert("Password or email not correct! Please try again.");
                 };

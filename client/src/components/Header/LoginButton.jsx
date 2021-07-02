@@ -6,18 +6,22 @@ import "./stylesheets/LoginButton.css";
 
 function LoginButton() {
     const [login, setLogin] = useState({
-        logged: false,
-        username: ""
+        logged: localStorage.getItem("logged") || false,
+        username: localStorage.getItem("username") || ""
     });
+    const pathname = window.location.pathname;
+    const [currentUrl, setCurrentUrl] = useState(pathname);
 
     useEffect(() => {
-        if (localStorage.getItem("logged") === true) {
-            setLogin({
-                logged: true,
-                username: localStorage.getItem("username")
-            });
-        }
-    }, []);
+        setCurrentUrl(pathname);
+    }, [pathname]);
+
+    useEffect(() => {
+        setLogin({
+            logged: localStorage.getItem("logged") || false,
+            username: localStorage.getItem("username") || ""
+        });
+    }, [currentUrl]);
 
     return(
         <div className="loginButtonContainer" data-testid="loginButtonContainer">

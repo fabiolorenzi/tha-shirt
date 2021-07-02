@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./stylesheets/HorizontalMenu.css";
 
 function HorizontalMenu() {
-    const pass = localStorage.getItem("pass") ? "" : "reservedHoriMenu";
+    const [pass, setPass] = useState("");
+
+    const pathname = window.location.pathname;
+    const [currentUrl, setCurrentUrl] = useState(pathname);
+
+    useEffect(() => {
+        setCurrentUrl(pathname);
+    }, [pathname]);
+
+    useEffect(() => {
+        if (localStorage.getItem("pass") && localStorage.getItem("pass" === true)) {
+            setPass("reservedHoriMenu");
+        } else {
+            setPass("");
+        };
+    }, [currentUrl]);
 
     return(
         <div className="horizontalMenuContainer" data-testid="horizontalMenuContainer">
