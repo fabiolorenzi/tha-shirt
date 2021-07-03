@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "./stylesheets/Login.css";
@@ -20,9 +20,45 @@ function Login() {
         setLoginData({...loginData, [e.target.name]: e.target.value});
     };
 
+    useEffect(() => {
+        axios.get("http://localhost:8082/api/users/")
+            .then(res => setUsers(res.data))
+            .catch(err => alert("Not possible to login now. Please retry later."));
+    }, []);
+
     let i = 0;
 
     const loginAction = e => {
+        e.preventDefault();
+        users.forEach(user => {
+            if (user.email === loginData.email) {
+                i = 0;
+                if (user.password === loginData.password) {
+                    localStorage.setItem("logged", true);
+                    localStorage.setItem("username", user.username);
+                    localStorage.setItem("pass", user.pass);
+                    localStorage.setItem("id", user._id);
+                    alert("Login successful!!!");
+                    history.push("/");
+                    window.location.reload();
+                } else {
+                    setLoginData({...loginData, password: ""});
+                    alert("Password not correct! Please check the email you inserted.");
+                };
+            } else if (i < users.length - 1) {
+                i++;
+            } else {
+                alert("User not found! Please check the email you inserted or create the account.");
+                setLoginData({
+                    email: "",
+                    password: ""
+                });
+                i = 0;
+            };
+        });
+    };
+
+    /*const loginAction = e => {
         e.preventDefault();
         axios.get("http://localhost:8082/api/users/")
             .then(res => setUsers(res.data))
@@ -59,7 +95,7 @@ function Login() {
                     password: ""
                 });
             });
-    };
+    };*/
 
     const psswShow = e => {
         e.preventDefault();
