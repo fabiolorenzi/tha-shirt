@@ -6,13 +6,13 @@ import CreateAccount from "./CreateAccount.jsx";
 
 function LoginArea() {
     return(
-        <div className="loginAreaContainer">
-            <h1>Login Area</h1>
+        <div className="loginAreaContainer" data-testid="loginAreaContainer">
+            <h1 data-testid="loginAreaTitle">Login Area</h1>
             <div>
-                <div className="login">
+                <div className="login" data-testid="loginAreaLoginDiv">
                     <Login />
                 </div>
-                <div className="createAccount">
+                <div className="createAccount" data-testid="loginAreaCreateAccountDiv">
                     <CreateAccount />
                 </div>
             </div>
