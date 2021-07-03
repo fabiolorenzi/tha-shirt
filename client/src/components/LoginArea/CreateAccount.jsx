@@ -86,27 +86,27 @@ function CreateAccount() {
     };
 
     return(
-        <div className="createAccountContainer">
-            <h1>Create account</h1>
+        <div className="createAccountContainer" data-testid="createAccountContainer">
+            <h1 data-testid="createAccountTitle">Create account</h1>
             <form onSubmit={createUser}>
                 <div>
-                    <label htmlFor="name">Name</label>
+                    <label htmlFor="name" data-testid="createAccountLabelName">Name</label>
                     <input type="text" name="name" value={user.name} onChange={handleChange} />
                 </div>
                 <div>
-                    <label htmlFor="surname">Surname</label>
+                    <label htmlFor="surname" data-testid="createAccountLabelSurname">Surname</label>
                     <input type="text" name="surname" value={user.surname} onChange={handleChange} />
                 </div>
                 <div>
-                    <label htmlFor="username">Username</label>
+                    <label htmlFor="username" data-testid="createAccountLabelUsername">Username</label>
                     <input type="text" name="username" value={user.username} onChange={handleChange} />
                 </div>
                 <div>
-                    <label htmlFor="birthday">Birthday</label>
+                    <label htmlFor="birthday" data-testid="createAccountLabelBirthday">Birthday</label>
                     <input type="date" name="birthday" value={user.birthday} onChange={handleChange} />
                 </div>
-                <div className="radiusSelector">
-                    <h3 id="genderLabel">Gender</h3>
+                <div className="radiusSelector" data-testid="createAccountRadiusSelector">
+                    <h3 id="genderLabel" data-testid="createAccountLabelGender">Gender</h3>
                     <div className="genderSelector" onChange={handleChange}>
                         <div>
                             <input type="radio" name="gender" value="male" className="radInp" />
@@ -123,39 +123,39 @@ function CreateAccount() {
                     </div>
                 </div>
                 <div>
-                    <label htmlFor="nation">Nation</label>
+                    <label htmlFor="nation" data-testid="createAccountLabelNation">Nation</label>
                     <input type="text" name="nation" value={user.nation} onChange={handleChange} />
                 </div>
                 <div>
-                    <label htmlFor="city">City</label>
+                    <label htmlFor="city" data-testid="createAccountLabelCity">City</label>
                     <input type="text" name="city" value={user.city} onChange={handleChange} />
                 </div>             
                 <div>
-                    <label htmlFor="street">Street</label>
+                    <label htmlFor="street" data-testid="createAccountLabelStreet">Street</label>
                     <input type="text" name="street" value={user.street} onChange={handleChange} />
                 </div>
                 <div>
-                    <label htmlFor="number">Number</label>
+                    <label htmlFor="number" data-testid="createAccountLabelNumber">Number</label>
                     <input type="text" name="number" value={user.number} onChange={handleChange} />
                 </div>
                 <div>
-                    <label htmlFor="postal_code">Postal Code</label>
+                    <label htmlFor="postal_code" data-testid="createAccountLabelPostal_code">Postal Code</label>
                     <input type="text" name="postal_code" value={user.postal_code} onChange={handleChange} />
                 </div>
                 <div>
-                    <label htmlFor="tel">Tel</label>
+                    <label htmlFor="tel" data-testid="createAccountLabelTel">Tel</label>
                     <input type="tel" name="tel" value={user.tel} onChange={handleChange} />
                 </div>
                 <div>
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email" data-testid="createAccountLabelEmail">Email</label>
                     <input type="email" name="email" value={user.email} onChange={handleChange} />
                 </div>
                 <div>
-                    <label htmlFor="password">Password</label>
+                    <label htmlFor="password" data-testid="createAccountLabelPassword">Password</label>
                     <input type={show.word} name="password" value={user.password} onChange={handleChange} />
-                    <button onClick={psswShow} className="passwordShower">Show</button>
+                    <button onClick={psswShow} className="passwordShower" data-testid="createAccountButtonShow">Show</button>
                 </div>
-                <button type="submit">Send</button>        
+                <button type="submit" data-testid="createAccountButtonSubmit">Send</button>        
             </form>
         </div>
     );
