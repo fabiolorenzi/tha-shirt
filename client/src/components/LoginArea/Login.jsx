@@ -16,26 +16,44 @@ function Login() {
         setLoginData({...loginData, [e.target.name]: e.target.value});
     };
 
+    let i = 0;
+
     const loginAction = e => {
         e.preventDefault();
         axios.get("http://localhost:8082/api/users/")
             .then(res => setUsers(res.data))
             .then(users.forEach(user => {
-                if (user.email === loginData.email && user.password === loginData.password) {
-                    localStorage.setItem("logged", true);
-                    localStorage.setItem("username", user.username);
-                    localStorage.setItem("pass", user.pass);
-                    localStorage.setItem("id", user._id);
-                    alert("Login successful!!!");
-                    history.push("/");
-                    window.location.reload();
+                if (user.email === loginData.email) {
+                    i = 0;
+                    if (user.password === loginData.password) {
+                        localStorage.setItem("logged", true);
+                        localStorage.setItem("username", user.username);
+                        localStorage.setItem("pass", user.pass);
+                        localStorage.setItem("id", user._id);
+                        alert("Login successful!!!");
+                        history.push("/");
+                        window.location.reload();
+                    } else {
+                        setLoginData({...loginData, password: ""});
+                        alert("Password not correct! Please check the email you inserted.");
+                    };
+                } else if (i < users.length - 1) {
+                    i++;
                 } else {
-                    alert("Password or email not correct! Please try again.");
+                    alert("User not found! Please check the email you inserted or create the account.");
+                    setLoginData({
+                        email: "",
+                        password: ""
+                    });
+                    i = 0;
                 };
             }))
             .catch(err => {
-                alert("User not found or data inserted incorrect");
-                setLoginData({...loginData, password: ""});
+                alert("Error during login, please try again.");
+                setLoginData({
+                    email: "",
+                    password: ""
+                });
             });
     };
 
