@@ -51,9 +51,7 @@ function Login() {
                     <label htmlFor="password">Password</label>
                     <input type="text" name="password" value={loginData.password} onChange={handleChange} />
                 </div>
-                <div>
                     <button type="submit">Login</button>
-                </div>
             </form>
         </div>
     );

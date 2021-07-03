@@ -135,9 +135,7 @@ function CreateAccount() {
                     <label htmlFor="password">Password</label>
                     <input type="text" name="password" value={user.password} onChange={handleChange} />
                 </div>
-                <div>
-                    <button type="submit">Send</button>
-                </div>          
+                <button type="submit">Send</button>        
             </form>
         </div>
     );

@@ -2,11 +2,12 @@
 @import "../../shared/stylesheets/openHiddenMenu.scss";
 
 .createAccountContainer {
-    display: inline-block;
+    display: block;
     width: 320px;
     border: 1px solid $color1;
     border-radius: 5px;
     padding: 10px;
+    margin: auto !important;
     h1 {
         display: block;
         font-size: 30px;
@@ -21,15 +22,15 @@
             float: right;
             margin-top: -3px;
         }
-        button {
-            float: right;
-            border: 1px solid $color1;
-            border-radius: 3px;
-            background-color: $color3;
-            color: $color1;
-            font-weight: 600;
-            padding: 5px 20px;
-        }
+    }
+    button {
+        margin-left: 235px;
+        border: 1px solid $color1;
+        border-radius: 3px;
+        background-color: $color3;
+        color: $color1;
+        font-weight: 600;
+        padding: 5px 20px;
     }
 }
 

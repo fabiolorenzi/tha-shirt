@@ -1,9 +1,10 @@
 .createAccountContainer {
-  display: inline-block;
+  display: block;
   width: 320px;
   border: 1px solid #000000;
   border-radius: 5px;
   padding: 10px;
+  margin: auto !important;
 }
 
 .createAccountContainer h1 {
@@ -24,8 +25,8 @@
   margin-top: -3px;
 }
 
-.createAccountContainer div button {
-  float: right;
+.createAccountContainer button {
+  margin-left: 235px;
   border: 1px solid #000000;
   border-radius: 3px;
   background-color: #ff9900;
