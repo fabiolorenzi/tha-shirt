@@ -18,6 +18,10 @@ function CreateAccount() {
         email: "",
         password: ""
     });
+    const [show, setShow] = useState({
+        showP: false,
+        word: "password"
+    });
 
     const handleChange = e => {
         setUser({...user, [e.target.name]: e.target.value});
@@ -63,6 +67,22 @@ function CreateAccount() {
                 window.location.reload();
             })
             .catch(err => alert(`${err}. Try again.`));
+    };
+
+    const psswShow = e => {
+        e.preventDefault();
+        if (show.showP) {
+            setShow({
+                showP: false,
+                word: "password"
+            });
+        } else {
+            setShow({
+                showP: true,
+                word: "text"
+            });
+        };
+        
     };
 
     return(
@@ -132,7 +152,8 @@ function CreateAccount() {
                 </div>
                 <div>
                     <label htmlFor="password">Password</label>
-                    <input type="text" name="password" value={user.password} onChange={handleChange} />
+                    <input type={show.word} name="password" value={user.password} onChange={handleChange} />
+                    <button onClick={psswShow} className="passwordShower">Show</button>
                 </div>
                 <button type="submit">Send</button>        
             </form>
