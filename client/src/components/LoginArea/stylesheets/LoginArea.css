@@ -22,4 +22,13 @@
 .loginAreaContainer div .login {
   vertical-align: top;
 }
+
+@media only screen and (max-width: 720px) {
+  .loginAreaContainer div .login,
+  .loginAreaContainer div .createAccount {
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
 /*# sourceMappingURL=LoginArea.css.map */

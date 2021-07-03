@@ -24,3 +24,16 @@
         }
     }
 }
+
+@media only screen and (max-width: 720px) {
+    .loginAreaContainer {
+        div {
+            .login,
+            .createAccount {
+                display: block;
+                width: 100%;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
