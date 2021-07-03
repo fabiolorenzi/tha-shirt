@@ -1,0 +1,9 @@
+.accountContainer {
+  display: block;
+  z-index: 1;
+  -webkit-filter: birghtness(100%);
+          filter: birghtness(100%);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+/*# sourceMappingURL=Account.css.map */

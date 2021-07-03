@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,iBAAiB,CAAC;EACd,OAAO,EAAE,KAAK;EACd,OAAO,EAAE,CAAC;EECV,MAAM,EAAE,gBAAgB;EACxB,mBAAmB,EAAE,IAAI;CFA5B",
+    "sources": [
+        "Account.scss",
+        "../../shared/stylesheets/var.scss",
+        "../../shared/stylesheets/openHiddenMenu.scss"
+    ],
+    "names": [],
+    "file": "Account.css"
+}

@@ -5,6 +5,7 @@ import Header from "./components/Header/Header.jsx";
 import MenuBar from "./components/MenuBar/MenuBar.jsx";
 import Home from "./components/Home/Home.jsx";
 import LoginArea from "./components/LoginArea/LoginArea.jsx";
+import Account from "./components/Account/Account.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/login" component={LoginArea} />
+                <Route path="/account" component={Account} />
             </Switch>
             <Footer />
         </div>

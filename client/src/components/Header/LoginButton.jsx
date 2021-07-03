@@ -25,7 +25,7 @@ function LoginButton() {
 
     return(
         <div className="loginButtonContainer" data-testid="loginButtonContainer">
-            <Link to={login.logged ? "/account/:id" : "/login"}>
+            <Link to={login.logged ? "/account" : "/login"}>
                 {!login.logged
                     ?
                         <div className="login_button" data-testid="button">

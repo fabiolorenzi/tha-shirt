@@ -1,0 +1,8 @@
+@import "../../shared/stylesheets/var.scss";
+@import "../../shared/stylesheets/openHiddenMenu.scss";
+
+.accountContainer {
+    display: block;
+    z-index: 1;
+    @include closedHiddenMenuEffect;
+}

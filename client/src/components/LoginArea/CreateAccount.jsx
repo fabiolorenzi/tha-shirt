@@ -81,8 +81,7 @@ function CreateAccount() {
                 showP: true,
                 word: "text"
             });
-        };
-        
+        }; 
     };
 
     return(
