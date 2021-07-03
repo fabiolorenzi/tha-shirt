@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import "./stylesheets/LoginArea.css";
+import "./stylesheets/Login.css";
 
 function Login() {
     const history = useHistory();
@@ -43,11 +43,17 @@ function Login() {
         <div className="loginContainer">
             <h1>Login</h1>
             <form noValidate onSubmit={loginAction}>
-                <label htmlFor="email">Email</label>
-                <input type="email" name="email" value={loginData.email} onChange={handleChange} />
-                <label htmlFor="password">Password</label>
-                <input type="text" name="password" value={loginData.password} onChange={handleChange} />
-                <button type="submit">Login</button>
+                <div>
+                    <label htmlFor="email">Email</label>
+                    <input type="email" name="email" value={loginData.email} onChange={handleChange} />
+                </div>
+                <div>
+                    <label htmlFor="password">Password</label>
+                    <input type="text" name="password" value={loginData.password} onChange={handleChange} />
+                </div>
+                <div>
+                    <button type="submit">Login</button>
+                </div>
             </form>
         </div>
     );

@@ -1,4 +1,6 @@
-.loginContainer {
-  display: block;
+.createAccountContainer {
+  display: inline-block;
+  width: 100%;
+  background-color: greenyellow;
 }
 /*# sourceMappingURL=CreateAccount.css.map */

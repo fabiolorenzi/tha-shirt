@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAGA,AAAA,eAAe,CAAC;EACZ,OAAO,EAAE,KAAK;CACjB",
+    "mappings": "AAGA,AAAA,uBAAuB,CAAC;EACpB,OAAO,EAAE,YAAY;EACrB,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,WAAW;CAChC",
     "sources": [
         "CreateAccount.scss",
         "../../shared/stylesheets/var.scss",
