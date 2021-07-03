@@ -10,6 +10,10 @@ function Login() {
         password: ""
     });
     const [users, setUsers] = useState([]);
+    const [show, setShow] = useState({
+        showP: false,
+        word: "password"
+    });
 
     const handleChange = e => {
         e.preventDefault();
@@ -57,6 +61,22 @@ function Login() {
             });
     };
 
+    const psswShow = e => {
+        e.preventDefault();
+        if (show.showP) {
+            setShow({
+                showP: false,
+                word: "password"
+            });
+        } else {
+            setShow({
+                showP: true,
+                word: "text"
+            });
+        };
+        
+    };
+
     return(
         <div className="loginContainer">
             <h1>Login</h1>
@@ -67,7 +87,8 @@ function Login() {
                 </div>
                 <div>
                     <label htmlFor="password">Password</label>
-                    <input type="text" name="password" value={loginData.password} onChange={handleChange} />
+                    <input type={show.word} name="password" value={loginData.password} onChange={handleChange} />
+                    <button onClick={psswShow} className="passwordShower">Show</button>
                 </div>
                     <button type="submit">Login</button>
             </form>
