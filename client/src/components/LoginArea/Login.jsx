@@ -75,19 +75,19 @@ function Login() {
     };
 
     return(
-        <div className="loginContainer">
-            <h1>Login</h1>
+        <div className="loginContainer" data-testid="loginContainer">
+            <h1 data-testid="loginTitle">Login</h1>
             <form noValidate onSubmit={loginAction}>
                 <div>
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email" data-testid="loginLabelEmail">Email</label>
                     <input type="email" name="email" value={loginData.email} onChange={handleChange} />
                 </div>
                 <div>
-                    <label htmlFor="password">Password</label>
+                    <label htmlFor="password" data-testid="loginLabelPassword">Password</label>
                     <input type={show.word} name="password" value={loginData.password} onChange={handleChange} />
-                    <button onClick={psswShow} className="passwordShower">Show</button>
+                    <button onClick={psswShow} className="passwordShower" data-testid="loginButtonShow">Show</button>
                 </div>
-                    <button type="submit">Login</button>
+                    <button type="submit" data-testid="loginButtonLogin">Login</button>
             </form>
         </div>
     );
