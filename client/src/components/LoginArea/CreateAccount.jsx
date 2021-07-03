@@ -20,7 +20,6 @@ function CreateAccount() {
     });
 
     const handleChange = e => {
-        e.preventDefault();
         setUser({...user, [e.target.name]: e.target.value});
     };
 
