@@ -13,10 +13,10 @@ function HorizontalMenu() {
     }, [pathname]);
 
     useEffect(() => {
-        if (localStorage.getItem("pass") && localStorage.getItem("pass" === true)) {
-            setPass("reservedHoriMenu");
-        } else {
+        if (localStorage.getItem("pass") === "true") {
             setPass("");
+        } else {
+            setPass("reservedHoriMenu");
         };
     }, [currentUrl]);
 
