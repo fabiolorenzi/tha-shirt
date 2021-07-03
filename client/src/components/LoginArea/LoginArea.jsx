@@ -8,8 +8,14 @@ function LoginArea() {
     return(
         <div className="loginAreaContainer">
             <h1>Login Area</h1>
-            <Login />
-            <CreateAccount />
+            <div>
+                <div className="login">
+                    <Login />
+                </div>
+                <div className="createAccount">
+                    <CreateAccount />
+                </div>
+            </div>
         </div>
     );
 };

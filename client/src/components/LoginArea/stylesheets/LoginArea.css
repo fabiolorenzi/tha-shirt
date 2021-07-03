@@ -5,5 +5,22 @@
   background-color: #ffffff;
   z-index: 1;
   padding-bottom: 100px;
+  text-align: center;
+}
+
+.loginAreaContainer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.loginAreaContainer div .login,
+.loginAreaContainer div .createAccount {
+  display: block;
+  width: 50%;
 }
 /*# sourceMappingURL=LoginArea.css.map */

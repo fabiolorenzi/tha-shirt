@@ -22,11 +22,11 @@ function Login() {
             .then(res => setUsers(res.data))
             .then(users.forEach(user => {
                 if (user.email === loginData.email && user.password === loginData.password) {
-                    alert("Login successful!!!");
                     localStorage.setItem("logged", true);
                     localStorage.setItem("username", user.username);
                     localStorage.setItem("pass", user.pass);
                     localStorage.setItem("id", user._id);
+                    alert("Login successful!!!");
                     history.push("/");
                     window.location.reload();
                 } else {
