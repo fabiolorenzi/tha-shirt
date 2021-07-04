@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import { useSelector } from "react-redux";
 import LoggedIcon from "../../img/logged-icon.png";
 import "./stylesheets/Account.css";
 
 function Account() {
     const history = useHistory();
+    const burgerButtonState = useSelector(state => state.burgerButtonState);
     const [user, setUser] = useState({
         name: "",
         surname: "",
@@ -153,8 +155,10 @@ function Account() {
             .catch(err => alert("Account not removed correctly! Please try again."));
     };
 
+    const openBurger = burgerButtonState ? "openHome" : "";
+
     return(
-        <div className="accountContainer">
+        <div className="accountContainer" id={openBurger}>
             <h1>{user.username}</h1>
             <div className="accountImage">
                 <img src={LoggedIcon} alt="account" />
@@ -224,15 +228,15 @@ function Account() {
                 </div>
                 {
                     !inChange
-                        ? <button onClick={changer}>Change Data</button>
+                        ? <button onClick={changer} id="changeDataButton">Change Data</button>
                         : 
                             <div>
-                                <button onClick={saveChange}>Save</button>
-                                <button onClick={cancelChange}>Cancel</button>
+                                <button onClick={saveChange} id="saveButton">Save</button>
+                                <button onClick={cancelChange} id="cancelButton">Cancel</button>
                             </div>
                 }
-                <button onClick={logout}>Log Out</button>
-                <button onClick={deleteAccount}>Delete Account</button>
+                <button onClick={logout} id="logoutButton">Log Out</button>
+                <button onClick={deleteAccount} id="deleteButton">Delete Account</button>
             </form>
         </div>
     );
