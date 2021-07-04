@@ -6,6 +6,7 @@ import "./stylesheets/Account.css";
 
 function Account() {
     const history = useHistory();
+    const locate = window.location;
     const [user, setUser] = useState({
         name: "",
         surname: "",
@@ -30,6 +31,7 @@ function Account() {
     const [inChange, setInChange] = useState(false);
 
     useEffect(() => {
+        console.log(locate);
         axios.get("http://localhost:8082/api/users/" + id)
             .then(res => setUser({
                 name: res.data.name,
@@ -49,7 +51,7 @@ function Account() {
             }))
             .catch(err => console.log({err}))
         // eslint-disable-next-line
-    }, []);
+    }, [locate]);
 
     const handleChange = e => {
         if (inChange) {
