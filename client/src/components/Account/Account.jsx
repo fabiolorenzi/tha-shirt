@@ -158,7 +158,7 @@ function Account() {
     const openBurger = burgerButtonState ? "openHome" : "";
 
     return(
-        <div className="accountContainer" id={openBurger}>
+        <div className="accountContainer" data-testid="accountContainer" id={openBurger}>
             <h1>{user.username}</h1>
             <div className="accountImage">
                 <img src={LoggedIcon} alt="account" />
@@ -181,7 +181,7 @@ function Account() {
                     <input type="date" name="birthday" value={user.birthday || ""} onChange={handleChange} />
                 </div>
                 <div className="radiusSelector">
-                    <h3 id="genderLabelAccount">Gender</h3>
+                    <h3 id="genderLabelAccount">Gender:</h3>
                     <div className="genderSelector" onChange={handleChange}>
                         <div>
                             <input type="radio" name="gender" value="male" className="radInp" />
