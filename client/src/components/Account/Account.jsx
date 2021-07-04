@@ -138,7 +138,8 @@ function Account() {
         window.location.reload();
     };
 
-    const deleteAccount = () => {
+    const deleteAccount = (e) => {
+        e.preventDefault();
         axios.delete("http://localhost:8082/api/users/" + id)
             .then(res => {
                 alert("Account removed successfully!");
