@@ -102,12 +102,31 @@ function Account() {
                 localStorage.setItem("username", user.username);
                 localStorage.setItem("pass", user.pass);
                 localStorage.setItem("id", user._id);
+                setInChange(false);
             })
             .catch(err => alert("Not possible to update the data. Please try again."));
     };
 
     function cancelChange() {
-        history.push("/account")
+        axios.get("http://localhost:8082/api/users/" + id)
+            .then(res => setUser({
+                name: res.data.name,
+                surname: res.data.surname,
+                username: res.data.username,
+                birthday: res.data.birthday,
+                gender: res.data.gender,
+                nation: res.data.nation,
+                city: res.data.city,
+                street: res.data.street,
+                number: res.data.number,
+                postal_code: res.data.postal_code,
+                tel: res.data.tel,
+                email: res.data.email,
+                password: res.data.password,
+                pass: res.data.pass
+            }))
+            .catch(err => console.log({err}));
+        setInChange(false);
     };
 
     function logout() {
