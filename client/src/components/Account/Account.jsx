@@ -102,7 +102,6 @@ function Account() {
                 localStorage.setItem("username", user.username);
                 localStorage.setItem("pass", user.pass);
                 localStorage.setItem("id", user._id);
-                window.location.reload();
             })
             .catch(err => alert("Not possible to update the data. Please try again."));
     };
