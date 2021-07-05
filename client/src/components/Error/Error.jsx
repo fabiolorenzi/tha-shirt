@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { open_close } from "../../redux/actions/open_closeAction.js";
 import { Helmet } from "react-helmet";
 import "./stylesheets/Error.css";
 
@@ -12,12 +11,12 @@ function Error() {
     const openBurger = burgerButtonState ? "openError" : "";
 
     return(
-        <div className="homeContainer" id={openBurger} data-testid="errorContainer">
+        <div className="errorContainer" id={openBurger} data-testid="errorContainer">
             <Helmet htmlAttributes={{lang: localStorage.getItem("lang") || "en"}}>
                 <title>THA SHIRT | ERROR</title>
             </Helmet>
             <div className="errorBody" data-testid="errorBody">
-                <h1 data-testid="fTitle">ERROR!</h1>
+                <h1 data-testid="fTitle">ERROR</h1>
                 <div className="errorLeft" data-testid="errorLeft">
                     <img src={Logo} alt="logo of tha shirt" />
                 </div>
