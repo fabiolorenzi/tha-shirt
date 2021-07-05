@@ -27,10 +27,26 @@ function Contacts() {
                 <div className="contactsRight" data-testid="contactsRight">
                     <h3 data-testid="contactsRightTitle">Contacts us on:</h3>
                     <div className="contactsLinks" data-testid="contactsLinks">
-                        <a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebookSquare /></a>
-                        <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagramSquare /></a>
-                        <a href="mailto:fabiolorenzi13975@gmail.com" target="_blank" rel="noreferrer"><MdEmail /></a>
-                        <a href="https://www.linkedin.com/in/fabio-lorenzi-6901421b3/" target="_blank" rel="noreferrer"><ImLinkedin /></a>
+                        <div>
+                            <a href="https://facebook.com" id="facebook" target="_blank" rel="noreferrer">
+                                <FaFacebookSquare />
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://instagram.com" id="instagram" target="_blank" rel="noreferrer">
+                                <FaInstagramSquare />
+                            </a>
+                        </div>
+                        <div>
+                            <a href="mailto:fabiolorenzi13975@gmail.com" id="email" target="_blank" rel="noreferrer">
+                                <MdEmail />
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/in/fabio-lorenzi-6901421b3/" id="linkedin" target="_blank" rel="noreferrer">
+                                <ImLinkedin />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

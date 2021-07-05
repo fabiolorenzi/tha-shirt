@@ -62,9 +62,53 @@
   font-size: 23px;
 }
 
+.contactsBody .contactsRight div {
+  display: block;
+  width: 50%;
+  margin: 30px auto 0;
+}
+
+.contactsBody .contactsRight div div {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+}
+
+.contactsBody .contactsRight div div a {
+  font-size: 60px;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+#facebook {
+  color: #4267B2;
+}
+
+#instagram {
+  color: #E1306C;
+}
+
+#email {
+  color: #ff4800;
+  font-size: 74px;
+  margin-top: -9px;
+}
+
+#linkedin {
+  color: #2867B2;
+  font-size: 50px;
+  margin-top: 2px;
+}
+
 @media only screen and (max-width: 1000px) {
   .contactsBody .contactsRight {
     margin-top: 0;
+  }
+  .contactsBody .contactsRight div {
+    width: 100%;
   }
 }
 
@@ -90,6 +134,9 @@
 @media only screen and (max-width: 500px) {
   .contactsBody .contactsRight {
     width: 95%;
+  }
+  .contactsBody .contactsRight div div a {
+    font-size: 50px;
   }
 }
 /*# sourceMappingURL=Contacts.css.map */
