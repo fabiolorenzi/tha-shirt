@@ -7,6 +7,7 @@ import Home from "./components/Home/Home.jsx";
 import LoginArea from "./components/LoginArea/LoginArea.jsx";
 import Account from "./components/Account/Account.jsx";
 import AboutUs from "./components/AboutUs/AboutUs.jsx";
+import Contacts from "./components/Contacts/Contacts.jsx";
 import Error from "./components/Error/Error.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/login" component={LoginArea} />
                 <Route path="/account" component={Account} />
                 <Route path="/aboutus" component={AboutUs} />
+                <Route path="/contacts" component={Contacts} />
                 <Route component={Error} />
             </Switch>
             <Footer />
