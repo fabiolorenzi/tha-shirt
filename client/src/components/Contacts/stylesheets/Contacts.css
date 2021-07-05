@@ -138,5 +138,13 @@
   .contactsBody .contactsRight div div a {
     font-size: 50px;
   }
+  #linkedin {
+    font-size: 40px;
+    margin-top: 2px;
+  }
+  #email {
+    font-size: 64px;
+    margin-top: -8px;
+  }
 }
 /*# sourceMappingURL=Contacts.css.map */
