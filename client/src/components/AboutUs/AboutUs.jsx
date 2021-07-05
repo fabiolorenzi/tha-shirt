@@ -16,13 +16,19 @@ function AboutUs() {
                 <title>THA SHIRT | ABOUT US</title>
             </Helmet>
             <div className="aboutUsBody" data-testid="aboutUsBody">
-                <h1 data-testid="aboutUsTitle">ERROR</h1>
+                <h1 data-testid="aboutUsTitle">About Us</h1>
                 <div className="aboutUsLeft" data-testid="aboutUsLeft">
                     <img src={Logo} alt="logo of tha shirt" />
                 </div>
                 <div className="aboutUsRight" data-testid="aboutUsRight">
-                    <h1 data-testid="aboutUsRightTitle">About us</h1>
-                    <h3 data-testid="aboutUsRightUndertitle">text</h3>
+                    <p data-testid="aboutUsRightText">
+                        Tha Shirt was born in 2021 in Brighton, UK. The dream was simple. Give everyone the possibility to buy 
+                        clothes to support any cartoon, band or brand. Our mission is to give alternative music fans the opportunity 
+                        to get all of their merchandise from one extensive catalogue. We want to be the top provider of alternative 
+                        clothing and music, TV, film and video game merchandise, with thousand of products available online and create 
+                        our group of loyal customers! Are you looking for the t-shirt of that Metal band? Or the one of the last 
+                        anime available on Netflix? Tha Shirt is the best website to go!
+                    </p>
                 </div>
             </div>
         </div>
