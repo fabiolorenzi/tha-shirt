@@ -40,7 +40,14 @@
             display: block;
             margin-left: 10px;
             margin-bottom: 5px;
+            transition-duration: 0.3s;
         }
+        button:hover {
+            transition-duration: 0.3s !important;
+            color: $color2 !important;
+            background-color: $color1 !important;
+        }
+        
     }
 }
 
@@ -53,6 +60,18 @@
     color: $color1;
     font-weight: 600;
     padding: 3px 15px;
+    transition-duration: 0.3s;
+}
+
+.passwordShower:hover {
+    transition-duration: 0.3s;
+    background-color: $color1;
+    color: $color2;
+}
+
+#psswShAct3 {
+    background-color: $color1;
+    color: $color2;
 }
 
 #changeDataButton {

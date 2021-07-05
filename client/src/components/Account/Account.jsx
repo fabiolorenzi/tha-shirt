@@ -228,7 +228,7 @@ function Account() {
                 <div>
                     <h3>Password:</h3>
                     <input type={show.word} name="password" value={user.password || ""} onChange={handleChange} />
-                    <button onClick={psswShow} className="passwordShower">Show</button>
+                    <button onClick={psswShow} id={show.showP ? "psswShAct3" : ""} className="passwordShower">Show</button>
                 </div>
                 {
                     !inChange

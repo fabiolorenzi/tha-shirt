@@ -49,6 +49,15 @@
   display: block;
   margin-left: 10px;
   margin-bottom: 5px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.accountContainer form button:hover {
+  -webkit-transition-duration: 0.3s !important;
+          transition-duration: 0.3s !important;
+  color: #ffffff !important;
+  background-color: #000000 !important;
 }
 
 .passwordShower {
@@ -60,6 +69,20 @@
   color: #000000;
   font-weight: 600;
   padding: 3px 15px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.passwordShower:hover {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+#psswShAct3 {
+  background-color: #000000;
+  color: #ffffff;
 }
 
 #changeDataButton {

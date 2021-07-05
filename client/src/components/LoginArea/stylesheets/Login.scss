@@ -27,6 +27,12 @@
             margin-top: 3px;
             margin-left: 106px;
             background-color: $color4;
+            transition-duration: 0.3s;
+        }
+        .passwordShower:hover {
+            transition-duration: 0.3s;
+            background-color: $color1;
+            color: $color2;
         }
     }
     button {
@@ -37,5 +43,16 @@
         color: $color1;
         font-weight: 600;
         padding: 5px 20px;
+        transition-duration: 0.3s;
     }
+    button:hover {
+        color: $color2;
+        background-color: $color1;
+        transition-duration: 0.3s;
+    }
+}
+
+#psswShAct1 {
+    background-color: $color1;
+    color: $color2;
 }

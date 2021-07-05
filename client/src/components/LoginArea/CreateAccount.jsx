@@ -152,7 +152,7 @@ function CreateAccount() {
                 <div>
                     <label htmlFor="password" data-testid="createAccountLabelPassword">Password</label>
                     <input type={show.word} name="password" value={user.password} onChange={handleChange} />
-                    <button onClick={psswShow} className="passwordShower" data-testid="createAccountButtonShow">Show</button>
+                    <button onClick={psswShow} className="passwordShower" id={show.showP ? "psswShAct2" : ""} data-testid="createAccountButtonShow">Show</button>
                 </div>
                 <button type="submit" data-testid="createAccountButtonSubmit">Send</button>        
             </form>

@@ -70,8 +70,7 @@ function Login() {
                 showP: true,
                 word: "text"
             });
-        };
-        
+        };   
     };
 
     return(
@@ -85,7 +84,7 @@ function Login() {
                 <div>
                     <label htmlFor="password" data-testid="loginLabelPassword">Password</label>
                     <input type={show.word} name="password" value={loginData.password} onChange={handleChange} />
-                    <button onClick={psswShow} className="passwordShower" data-testid="loginButtonShow">Show</button>
+                    <button onClick={psswShow} className="passwordShower" id={show.showP ? "psswShAct1" : ""} data-testid="loginButtonShow">Show</button>
                 </div>
                     <button type="submit" data-testid="loginButtonLogin">Login</button>
             </form>

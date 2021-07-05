@@ -30,6 +30,15 @@
   margin-top: 3px;
   margin-left: 106px;
   background-color: #ff0000;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.loginContainer div .passwordShower:hover {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .loginContainer button {
@@ -40,5 +49,19 @@
   color: #000000;
   font-weight: 600;
   padding: 5px 20px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.loginContainer button:hover {
+  color: #ffffff;
+  background-color: #000000;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+#psswShAct1 {
+  background-color: #000000;
+  color: #ffffff;
 }
 /*# sourceMappingURL=Login.css.map */
