@@ -25,7 +25,7 @@ function Contacts() {
                     <img src={Logo} alt="logo of tha shirt" />
                 </div>
                 <div className="contactsRight" data-testid="contactsRight">
-                    <h3 data-testid="contactsRightTitle">Contacts us on:</h3>
+                    <h3 data-testid="contactsRightTitle">Contact us on:</h3>
                     <div className="contactsLinks" data-testid="contactsLinks">
                         <div>
                             <a href="https://facebook.com" id="facebook" target="_blank" rel="noreferrer">
