@@ -21,7 +21,7 @@ function Contacts() {
                     <img src={Logo} alt="logo of tha shirt" />
                 </div>
                 <div className="contactsRight" data-testid="contactsRight">
-                    <h3 data-testid="contactsRightUndertitle">Contacts us on:</h3>
+                    <h3 data-testid="contactsRightTitle">Contacts us on:</h3>
                 </div>
             </div>
         </div>

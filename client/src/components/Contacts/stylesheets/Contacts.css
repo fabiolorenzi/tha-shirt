@@ -1,4 +1,4 @@
-.aboutUsContainer {
+.contactsContainer {
   display: block;
   width: 100%;
   padding-top: 100px;
@@ -11,111 +11,85 @@
           transition-duration: 0.5s;
 }
 
-.aboutUsContainer h3 {
+.contactsContainer h3 {
   text-align: center;
   font-size: 15px;
   font-weight: 400;
 }
 
-#openAboutUs {
+#openContacts {
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
 }
 
-.aboutUsBody {
+.contactsBody {
   display: block;
   width: 100%;
 }
 
-.aboutUsBody h1 {
+.contactsBody h1 {
   font-size: 40px;
   letter-spacing: 0.2em;
   text-align: center;
   margin-bottom: 80px;
 }
 
-.aboutUsBody div {
+.contactsBody div {
   vertical-align: top;
 }
 
-.aboutUsBody .aboutUsLeft {
+.contactsBody .contactsLeft {
   display: inline-block;
   width: 40%;
 }
 
-.aboutUsBody .aboutUsLeft img {
+.contactsBody .contactsLeft img {
   display: block;
   margin: auto;
   width: 50%;
 }
 
-.aboutUsBody .aboutUsRight {
+.contactsBody .contactsRight {
   display: inline-block;
   margin-top: 30px;
   width: 60%;
 }
 
-.aboutUsBody .aboutUsRight p {
-  width: 80%;
-  font-size: 20px;
+.contactsBody .contactsRight h3 {
   font-weight: 600;
-  font-style: italic;
-  line-height: 1.5em;
-}
-
-.aboutUsUnderBody {
-  display: block;
-  width: 100%;
-}
-
-.aboutUsUnderBody img {
-  display: block;
-  width: 80%;
-  margin: 80px auto;
+  font-size: 23px;
 }
 
 @media only screen and (max-width: 1000px) {
-  .aboutUsBody .aboutUsRight {
+  .contactsBody .contactsRight {
     margin-top: 0;
   }
 }
 
 @media only screen and (max-width: 650px) {
-  .aboutUsBody h1 {
+  .contactsBody h1 {
     font-size: 30px;
   }
-  .aboutUsBody .aboutUsLeft {
+  .contactsBody .contactsLeft {
     display: block;
     width: 80%;
     margin: auto;
   }
-  .aboutUsBody .aboutUsLeft img {
+  .contactsBody .contactsLeft img {
     width: 80%;
   }
-  .aboutUsBody .aboutUsRight {
+  .contactsBody .contactsRight {
     display: block;
     width: 90%;
     margin: 50px auto 0;
   }
-  .aboutUsBody .aboutUsRight p {
-    font-size: 20px;
-    text-align: center;
-    margin: auto;
-  }
-  .aboutUsUnderBody img {
-    width: 90%;
-    margin: 80px auto 20px;
-  }
 }
 
 @media only screen and (max-width: 500px) {
-  .aboutUsBody .aboutUsRight {
+  .contactsBody .contactsRight {
     width: 95%;
-  }
-  .aboutUsBody .aboutUsRight p {
-    font-size: 18px;
   }
 }
 /*# sourceMappingURL=Contacts.css.map */
