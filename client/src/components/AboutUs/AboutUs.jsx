@@ -4,11 +4,12 @@ import { Helmet } from "react-helmet";
 import "./stylesheets/AboutUs.css";
 
 import Logo from "../../img/tha-shirt-logo.png";
+import ShopImage from "../../img/shop_image_01.jpg";
 
 function AboutUs() {
     const burgerState = useSelector(state => state.burgerButtonState);
 
-    const openBurger = burgerState ? "openAbout" : "closedAbout";
+    const openBurger = burgerState ? "openAboutUs" : "closedAboutUs";
 
     return(
         <div className="aboutUsContainer" id={openBurger} data-testid="aboutUsContainer">
@@ -30,6 +31,9 @@ function AboutUs() {
                         anime available on Netflix? Tha Shirt is the best website to go!
                     </p>
                 </div>
+            </div>
+            <div className="aboutUsUnderBody" data-testid="aboutUsUnderBody">
+                <img src={ShopImage} alt="shop" />
             </div>
         </div>
     );
