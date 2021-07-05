@@ -157,6 +157,10 @@ function Account() {
 
     const openBurger = burgerButtonState ? "openHome" : "";
 
+    const maleState = user.gender === "male" ? "true" : "";
+    const femaleState = user.gender === "female" ? "true" : "";
+    const notBinaryState = user.gender === "not-binary" ? "true" : "";
+
     return(
         <div className="accountContainer" data-testid="accountContainer" id={openBurger}>
             <h1>{user.username}</h1>
@@ -184,15 +188,15 @@ function Account() {
                     <h3 id="genderLabelAccount">Gender:</h3>
                     <div className="genderSelector" onChange={handleChange}>
                         <div>
-                            <input type="radio" name="gender" value="male" className="radInp" />
+                            <input type="radio" name="gender" value="male" className="radInp" checked={maleState} />
                             <p className="radLab">Male</p>
                         </div>
                         <div>
-                            <input type="radio" name="gender" value="female" className="radInp" />
+                            <input type="radio" name="gender" value="female" className="radInp" checked={femaleState} />
                             <p className="radLab">Female</p>
                         </div>
                         <div>
-                            <input type="radio" name="gender" value="not-binary" className="radInp" />
+                            <input type="radio" name="gender" value="not-binary" className="radInp" checked={notBinaryState} />
                             <p className="radLab">Not Binary</p>
                         </div>
                     </div>
