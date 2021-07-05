@@ -16,13 +16,13 @@ function Error() {
                 <title>THA SHIRT | ERROR</title>
             </Helmet>
             <div className="errorBody" data-testid="errorBody">
-                <h1 data-testid="fTitle">ERROR</h1>
+                <h1 data-testid="errorTitle">ERROR</h1>
                 <div className="errorLeft" data-testid="errorLeft">
                     <img src={Logo} alt="logo of tha shirt" />
                 </div>
                 <div className="errorRight" data-testid="errorRight">
-                    <h1 data-testid="rightTitle">ERROR</h1>
-                    <h3 data-testid="rightUndertitle">Page not found. Please return to the <a href="/">Homepage</a></h3>
+                    <h1 data-testid="errorRightTitle">ERROR</h1>
+                    <h3 data-testid="errorRightUndertitle">Page not found. Please return to the <a href="/">Homepage</a></h3>
                 </div>
             </div>
         </div>
