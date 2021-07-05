@@ -182,7 +182,7 @@ function Account() {
                 </div>
                 <div>
                     <h3>Birthday:</h3>
-                    <input type="date" name="birthday" value={user.birthday || ""} onChange={handleChange} />
+                    <input type="date" name="birthday" value={user.birthday.substr(0,10) || ""} onChange={handleChange} />
                 </div>
                 <div className="radiusSelector">
                     <h3 id="genderLabelAccount">Gender:</h3>
