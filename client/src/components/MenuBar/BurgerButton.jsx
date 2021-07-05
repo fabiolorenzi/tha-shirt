@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { open_close } from "../../redux/actions/open_closeAction.js";
 import "./stylesheets/BurgerButton.css";
 
 function BurgerButton() {
+    const buttonState = useSelector(state => state.burgerButtonState);
     const dispatch = useDispatch();
     const [open, setOpen] = useState(false);
 
@@ -12,6 +13,10 @@ function BurgerButton() {
         setOpen(!open);
         dispatch(open_close());
     };
+
+    useEffect(() => {
+        buttonState ? setOpen(true) : setOpen(false);
+    }, [buttonState]);
 
     return(
         <div className="burgerButton" data-testid="burgerButton" onClick={opener} id={open ? "burgerOpen" : "burgerClosed"}>
