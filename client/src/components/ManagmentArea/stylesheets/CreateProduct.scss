@@ -58,3 +58,29 @@
     left: 50px;
     top: -18px;
 }
+
+@media only screen and (max-width: 500px) {
+    .createProdContainer {
+        width: 300px;
+        form {
+            div {
+                label {
+                    font-size: 12px;
+                }
+                input,
+                textarea {
+                    float: right;
+                    margin-top: -3px;
+                }
+                textarea {
+                    vertical-align: top;
+                    width: 208.5px !important;
+                    height: 150px;
+                }
+            }
+        }
+        button {
+            margin-left: 200px;
+        }
+    }
+}

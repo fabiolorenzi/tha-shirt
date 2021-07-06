@@ -61,4 +61,26 @@
   left: 50px;
   top: -18px;
 }
+
+@media only screen and (max-width: 500px) {
+  .createProdContainer {
+    width: 300px;
+  }
+  .createProdContainer form div label {
+    font-size: 12px;
+  }
+  .createProdContainer form div input,
+  .createProdContainer form div textarea {
+    float: right;
+    margin-top: -3px;
+  }
+  .createProdContainer form div textarea {
+    vertical-align: top;
+    width: 208.5px !important;
+    height: 150px;
+  }
+  .createProdContainer button {
+    margin-left: 200px;
+  }
+}
 /*# sourceMappingURL=CreateProduct.css.map */
