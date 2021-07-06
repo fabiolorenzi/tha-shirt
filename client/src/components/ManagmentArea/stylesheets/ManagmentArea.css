@@ -21,7 +21,7 @@
   font-size: 20px;
   font-weight: 400;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   font-style: italic;
 }
 
@@ -32,12 +32,30 @@
           transition-duration: 0.5s;
 }
 
+.manAreaImg {
+  display: block;
+  width: 40%;
+  margin: 0 auto 50px;
+}
+
+.manAreaImg img {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
 @media only screen and (max-width: 650px) {
   .manAreaBody h1 {
     font-size: 30px;
   }
   .manAreaBody h2 {
     font-size: 18px;
+  }
+  .manAreaImg {
+    width: 80%;
+  }
+  .manAreaImg img {
+    width: 80%;
   }
 }
 /*# sourceMappingURL=ManagmentArea.css.map */

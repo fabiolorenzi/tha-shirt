@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import { Helmet } from "react-helmet";
 import "./stylesheets/ManagmentArea.css";
 
+import Logo from "../../img/managment-logo.png";
+
 import CreateProduct from "./CreateProduct.jsx";
 
 function ManagmentArea() {
@@ -18,6 +20,9 @@ function ManagmentArea() {
             <div className="manAreaBody" data-testid="manAreaBody">
                 <h1 data-testid="manAreaTitle">Managment Area</h1>
                 <h2 data-testid="manAreaUndertitle">This area is reserved</h2>
+                <div className="manAreaImg">
+                    <img src={Logo} alt="managment logo" />
+                </div>
                 <div>
                     <div data-testid="createProdDiv" className="createProdDiv">
                         <CreateProduct />
