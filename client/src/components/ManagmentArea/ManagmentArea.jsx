@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import { Helmet } from "react-helmet";
 import "./stylesheets/ManagmentArea.css";
 
+import CreateProduct from "./CreateProduct.jsx";
+
 function ManagmentArea() {
     const burgerState = useSelector(state => state.burgerButtonState);
 
@@ -18,7 +20,9 @@ function ManagmentArea() {
                 <h2 data-testid="manAreaUndertitle">This area is reserved</h2>
                 <div>
                     <div data-testid="modifyProdDiv" className="modifyProdDiv"></div>
-                    <div data-testid="createProdDiv" className="createProdDiv"></div>
+                    <div data-testid="createProdDiv" className="createProdDiv">
+                        <CreateProduct />
+                    </div>
                 </div>
             </div>
         </div>

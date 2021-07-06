@@ -1,0 +1,11 @@
+@import "../../shared/stylesheets/var.scss";
+@import "../../shared/stylesheets/openHiddenMenu.scss";
+
+.createProdContainer {
+    display: block;
+    width: 320px;
+    border: 1px solid $color1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: auto !important;
+}

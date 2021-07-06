@@ -1,0 +1,9 @@
+.createProdContainer {
+  display: block;
+  width: 320px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 10px;
+  margin: auto !important;
+}
+/*# sourceMappingURL=CreateProduct.css.map */

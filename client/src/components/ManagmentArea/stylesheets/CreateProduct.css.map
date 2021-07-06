@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,oBAAoB,CAAC;EACjB,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,GAAG,CAAC,KAAK,CCNZ,OAAO;EDOZ,aAAa,EAAE,GAAG;EAClB,OAAO,EAAE,IAAI;EACb,MAAM,EAAE,eAAe;CAC1B",
+    "sources": [
+        "CreateProduct.scss",
+        "../../shared/stylesheets/var.scss",
+        "../../shared/stylesheets/openHiddenMenu.scss"
+    ],
+    "names": [],
+    "file": "CreateProduct.css"
+}
