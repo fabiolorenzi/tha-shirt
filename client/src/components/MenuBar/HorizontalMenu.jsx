@@ -26,7 +26,7 @@ function HorizontalMenu() {
             <NavLink to="/shop" className="horiMenu1" activeClassName="activeHoriMenu" data-testid="link2">SHOP</NavLink>
             <NavLink to="/aboutus" className="horiMenu1" activeClassName="activeHoriMenu" data-testid="link3">ABOUT US</NavLink>
             <NavLink to="/contacts" className="horiMenu1" activeClassName="activeHoriMenu" data-testid="link4">CONTACTS</NavLink>
-            <NavLink to="/managment" className="horiMenu1" activeClassName="activeHoriMenu" id={pass} data-testid="link5">MANAGMENT</NavLink>
+            <NavLink to="/managment-area" className="horiMenu1" activeClassName="activeHoriMenu" id={pass} data-testid="link5">MANAGMENT</NavLink>
         </div>
     );
 };

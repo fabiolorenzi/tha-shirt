@@ -22,7 +22,7 @@ function HiddenMenu() {
             <NavLink to="/shop" className="hiddenMenu1" activeClassName="activeHiddenMenu" data-testid="link2">SHOP</NavLink>
             <NavLink to="/aboutus" className="hiddenMenu1" activeClassName="activeHiddenMenu" data-testid="link3">ABOUT US</NavLink>
             <NavLink to="/contacts" className="hiddenMenu1" activeClassName="activeHiddenMenu" data-testid="link4">CONTACTS</NavLink>
-            <NavLink to="/managment" className="hiddenMenu1" activeClassName="activeHiddenMenu" id={pass} data-testid="link5">MANAGMENT</NavLink>
+            <NavLink to="/managment-area" className="hiddenMenu1" activeClassName="activeHiddenMenu" id={pass} data-testid="link5">MANAGMENT</NavLink>
         </div>
     );
 };
