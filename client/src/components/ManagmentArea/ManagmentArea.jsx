@@ -19,10 +19,10 @@ function ManagmentArea() {
                 <h1 data-testid="manAreaTitle">Managment Area</h1>
                 <h2 data-testid="manAreaUndertitle">This area is reserved</h2>
                 <div>
-                    <div data-testid="modifyProdDiv" className="modifyProdDiv"></div>
                     <div data-testid="createProdDiv" className="createProdDiv">
                         <CreateProduct />
                     </div>
+                    <div data-testid="modifyProdDiv" className="modifyProdDiv"></div>
                 </div>
             </div>
         </div>
