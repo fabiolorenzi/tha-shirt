@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./stylesheets/CreateProduct.css";
 
-import ImageDropBox from "./ImageDropBox.jsx";
-
 function CreateProduct() {
     const [prod, setProd] = useState({
         name: "",
@@ -13,13 +11,25 @@ function CreateProduct() {
         colour: "",
         description: "",
         price: "",
-        published_date: new Date(),
+        published_date: "",
         update_date: "",
         image: ""
     });
 
     const handleChange = e => {
         setProd({...prod, [e.target.name]: e.target.value});
+    };
+
+    function handleImage(e) {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            const base64String = reader.result
+                .replace("data:", "")
+                .replace(/^.+,/, "");
+            setProd({...prod, image: base64String});
+        };
+        reader.readAsDataURL(file);
     };
 
     function createNewProd(e) {
@@ -32,7 +42,7 @@ function CreateProduct() {
             colour: prod.colour,
             description: prod.description,
             price: prod.price,
-            published_date: prod.published_date,
+            published_date: new Date(),
             update_date: "",
             image: prod.image
         });
@@ -48,7 +58,7 @@ function CreateProduct() {
                     colour: "",
                     description: "",
                     price: "",
-                    published_date: new Date(),
+                    published_date: "",
                     update_date: "",
                     image: ""
                 });
@@ -89,8 +99,9 @@ function CreateProduct() {
                     <label htmlFor="price" date-testid="createProdLabelPrice">Price</label>
                     <input type="text" name="price" value={prod.price} onChange={handleChange} />
                 </div>
-                <div>
-                    <ImageDropBox />
+                <div className="createProdImageUploader">
+                    <label htmlFor="image" data-testid="createProdImageLabel">Image</label>
+                    <input type="file" name="image" id="file" accept=".jpeg, .png, .jpg" onChange={handleImage} />
                 </div>
                 <button type="submit" data-testid="createProdButtonSubmit">Create</button>        
             </form>

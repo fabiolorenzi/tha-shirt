@@ -29,8 +29,9 @@ const ProductSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    pusblished_date: {
+    published_date: {
         type: Date,
+        default: Date.now
     },
     update_date: {
         type: Date,
