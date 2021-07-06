@@ -92,11 +92,11 @@ function CreateProduct() {
                     <input type="text" name="colour" value={prod.colour} onChange={handleChange} />
                 </div>
                 <div className="descriptionDiv">
-                    <label htmlFor="descrition" date-testid="createProdLabelDescription">Description</label>
+                    <label htmlFor="descrition" data-testid="createProdLabelDescription">Description</label>
                     <textarea name="description" value={prod.description} className="descriptionArea" onChange={handleChange} />
                 </div>
                 <div>
-                    <label htmlFor="price" date-testid="createProdLabelPrice">Price</label>
+                    <label htmlFor="price" data-testid="createProdLabelPrice">Price</label>
                     <input type="text" name="price" value={prod.price} onChange={handleChange} />
                 </div>
                 <div className="createProdImageUploader">
