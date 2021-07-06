@@ -91,9 +91,9 @@ function CreateProduct() {
                     <label htmlFor="colour" data-testid="createProdLabelColour">Colour</label>
                     <input type="text" name="colour" value={prod.colour} onChange={handleChange} />
                 </div>
-                <div>
+                <div className="descriptionDiv">
                     <label htmlFor="descrition" date-testid="createProdLabelDescription">Description</label>
-                    <input type="text" name="description" value={prod.description} className="descriptionArea" onChange={handleChange} />
+                    <textarea name="description" value={prod.description} className="descriptionArea" onChange={handleChange} />
                 </div>
                 <div>
                     <label htmlFor="price" date-testid="createProdLabelPrice">Price</label>
