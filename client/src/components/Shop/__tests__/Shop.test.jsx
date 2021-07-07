@@ -8,7 +8,7 @@ import Shop from "../Shop.jsx";
 
 afterEach(cleanup);
 
-let container, body, title, logo;
+let container, body, title, logo, searchBar, shopList;
 
 beforeEach(() => {
     const { getByTestId } = render(
@@ -23,6 +23,8 @@ beforeEach(() => {
     body = getByTestId("shopBody");
     title = getByTestId("shopTitle");
     logo = getByTestId("shopLogo");
+    searchBar = getByTestId("searchBar");
+    shopList = getByTestId("shopList");
 });
 
 test("Container renders correctly", () => {
@@ -39,4 +41,12 @@ test("Title renders correctly", () => {
 
 test("Logo div renders correctly", () => {
     expect(logo.className).toContain("shopLogo");
+});
+
+test("Search bar renders correctly", () => {
+    expect(searchBar.className).toContain("searchBar");
+});
+
+test("Shop list renders correctly", () => {
+    expect(shopList.className).toContain("shopList");
 });

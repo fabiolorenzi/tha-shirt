@@ -21,6 +21,10 @@ function Shop() {
                     <img src={Logo} alt="logo of tha shirt" />
                 </div>
             </div>
+            <div className="searchBar" data-testid="searchBar">
+            </div>
+            <div className="shopList" data-testid="shopList">
+            </div>
         </div>
     );
 };
