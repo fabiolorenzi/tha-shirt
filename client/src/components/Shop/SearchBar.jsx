@@ -36,14 +36,17 @@ function SearchBar() {
 
     return(
         <div className="SBContainer" data-testid="SBContainer">
-            <input
-                type="text"
-                name="search"
-                value={search}
-                onChange={handleChange}
-            />
-            <button onClick={searchItems} data-testid="SBSearch">Search</button>
-            <button onClick={emptySearch} data-testid="SBCancel">Cancel</button>
+            <div>
+                <input
+                    type="text"
+                    name="search"
+                    placeholder="Search"
+                    value={search}
+                    onChange={handleChange}
+                />
+                <button onClick={searchItems} id="sbSearch" data-testid="SBSearch">Search</button>
+                <button onClick={emptySearch} id="sbCancel" data-testid="SBCancel">Cancel</button>
+            </div>
         </div>
     );
 };
