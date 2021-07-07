@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,YAAY,CAAC;EACT,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,IAAI;EACX,gBAAgB,ECLX,OAAO;CDMf",
+    "sources": [
+        "SearchBar.scss",
+        "../../shared/stylesheets/var.scss",
+        "../../shared/stylesheets/openHiddenMenu.scss"
+    ],
+    "names": [],
+    "file": "SearchBar.css"
+}
