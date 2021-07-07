@@ -20,9 +20,9 @@ function ShopList() {
     }, []);
 
     return(
-        <div className="slContainer">
+        <div className="slContainer" data-testid="slContainer">
             <h1 data-testid="slTitle">Clothes types</h1>
-            <div className="slBody"></div>
+            <div className="slBody" data-testid="slBody"></div>
         </div>
     );
 };
