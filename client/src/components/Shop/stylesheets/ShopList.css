@@ -1,0 +1,14 @@
+.slContainer {
+  display: block;
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: 80px;
+}
+
+.slContainer h1 {
+  font-size: 30px;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-align: center;
+}
+/*# sourceMappingURL=ShopList.css.map */

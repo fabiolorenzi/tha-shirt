@@ -6,6 +6,7 @@ import "./stylesheets/Shop.css";
 import Logo from "../../img/tha-shirt-logo.png";
 
 import SearchBar from "./SearchBar.jsx";
+import ShopList from "./ShopList.jsx";
 
 function Shop() {
     const burgerState = useSelector(state => state.burgerButtonState);
@@ -27,6 +28,7 @@ function Shop() {
                 <SearchBar /> 
             </div>
             <div className="shopList" data-testid="shopList">
+                <ShopList />
             </div>
         </div>
     );
