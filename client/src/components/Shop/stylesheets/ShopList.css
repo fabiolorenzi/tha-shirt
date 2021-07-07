@@ -11,4 +11,10 @@
   letter-spacing: 1px;
   text-align: center;
 }
+
+@media only screen and (max-width: 400px) {
+  .slContainer h1 {
+    font-size: 25px;
+  }
+}
 /*# sourceMappingURL=ShopList.css.map */

@@ -3,6 +3,8 @@ import axios from "axios";
 
 import "./stylesheets/ShopList.css";
 
+import Type from "./Type.jsx";
+
 function ShopList() {
     let types = [];
 
@@ -22,7 +24,11 @@ function ShopList() {
     return(
         <div className="slContainer" data-testid="slContainer">
             <h1 data-testid="slTitle">Clothes types</h1>
-            <div className="slBody" data-testid="slBody"></div>
+            <div className="slBody" data-testid="slBody">
+                {types.map(type => {
+                    return <Type type={type} />
+                })}
+            </div>
         </div>
     );
 };
