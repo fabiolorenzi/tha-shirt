@@ -35,15 +35,15 @@ function SearchBar() {
     };
 
     return(
-        <div className="SBContainer">
+        <div className="SBContainer" data-testid="SBContainer">
             <input
                 type="text"
                 name="search"
                 value={search.value}
                 onChange={handleChange}
             />
-            <button onClick={searchItems}>Search</button>
-            <button onClick={emptySearch}>Cancel</button>
+            <button onClick={searchItems} data-testid="SBSearch">Search</button>
+            <button onClick={emptySearch} data-testid="SBCancel">Cancel</button>
         </div>
     );
 };
