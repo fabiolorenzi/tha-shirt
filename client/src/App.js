@@ -9,6 +9,7 @@ import Account from "./components/Account/Account.jsx";
 import AboutUs from "./components/AboutUs/AboutUs.jsx";
 import Contacts from "./components/Contacts/Contacts.jsx";
 import ManagmentArea from "./components/ManagmentArea/ManagmentArea.jsx";
+import Shop from "./components/Shop/Shop.jsx";
 import Error from "./components/Error/Error.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 
@@ -20,6 +21,7 @@ function App() {
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/login" component={LoginArea} />
+                <Route exact path="/shop" component={Shop} />
                 <Route path="/account" component={Account} />
                 <Route path="/aboutus" component={AboutUs} />
                 <Route path="/contacts" component={Contacts} />
