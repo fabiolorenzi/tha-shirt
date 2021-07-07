@@ -1,12 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import "./stylesheets/ShopList.css";
-
 import Type from "./Type.jsx";
 
 function ShopList() {
+    const [typesRendered, setTypesRendered] = useState();
     let types = [];
+
+    function compiler() {
+        const html = types.map(type => {
+            return <Type type={type} />
+        });
+        setTypesRendered(html);
+    };
 
     useEffect(() => {
         axios.get("http://localhost:8082/api/products/")
@@ -16,6 +23,7 @@ function ShopList() {
                         types.push(res.data[i].type);
                     }
                 }
+                compiler();
             })
             .catch(err => console.log(err));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -25,9 +33,7 @@ function ShopList() {
         <div className="slContainer" data-testid="slContainer">
             <h1 data-testid="slTitle">Clothes types</h1>
             <div className="slBody" data-testid="slBody">
-                {types.map(type => {
-                    return <Type type={type} />
-                })}
+                {typesRendered}
             </div>
         </div>
     );
