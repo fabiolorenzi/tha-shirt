@@ -31,7 +31,7 @@ function SearchBar() {
 
     const emptySearch = e => {
         e.preventDefault();
-        window.location.reload();
+        setSearch("");
     };
 
     return(
@@ -39,7 +39,7 @@ function SearchBar() {
             <input
                 type="text"
                 name="search"
-                value={search.value}
+                value={search}
                 onChange={handleChange}
             />
             <button onClick={searchItems} data-testid="SBSearch">Search</button>
