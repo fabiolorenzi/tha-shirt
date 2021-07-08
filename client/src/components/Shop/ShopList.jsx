@@ -10,7 +10,7 @@ function ShopList() {
 
     function compiler() {
         const html = types.map(type => {
-            return <Type typeKey={type} />
+            return <div><Type typeKey={type} /></div>
         });
         setTypesRendered(html);
     };

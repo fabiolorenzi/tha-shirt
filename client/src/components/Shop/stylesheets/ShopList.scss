@@ -11,7 +11,16 @@
         font-style: italic;
         letter-spacing: 1px;
         text-align: center;
+        margin-bottom: 100px;
     }
+}
+
+.slBody {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
 }
 
 @media only screen and (max-width: 400px) {
