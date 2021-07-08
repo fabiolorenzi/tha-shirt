@@ -11,6 +11,7 @@ import Contacts from "./components/Contacts/Contacts.jsx";
 import ManagmentArea from "./components/ManagmentArea/ManagmentArea.jsx";
 import Shop from "./components/Shop/Shop.jsx";
 import CategoriesList from "./components/Shop/CategoriesList.jsx";
+import UnderCategoriesList from "./components/Shop/UnderCategoriesList.jsx";
 import Error from "./components/Error/Error.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/login" component={LoginArea} />
                 <Route exact path="/shop" component={Shop} />
                 <Route exact path="/shop/:type" component={CategoriesList} />
+                <Route exact path="/shop/:type/:category" component={UnderCategoriesList} />
                 <Route path="/account" component={Account} />
                 <Route path="/aboutus" component={AboutUs} />
                 <Route path="/contacts" component={Contacts} />

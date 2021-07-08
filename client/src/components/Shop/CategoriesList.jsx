@@ -29,8 +29,7 @@ function CategoriesList(props) {
         setCatRendered(html);
     };
 
-    useEffect(() => {
-        
+    useEffect(() => {  
         axios.get("http://localhost:8082/api/products/")
             .then((res) => {
                 for (let i = 0; i < res.data.length; i++) {
