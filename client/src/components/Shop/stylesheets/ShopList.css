@@ -25,6 +25,11 @@
       justify-content: space-around;
 }
 
+.slBody a {
+  text-decoration: none;
+  color: #000000;
+}
+
 @media only screen and (max-width: 400px) {
   .slContainer h1 {
     font-size: 25px;
