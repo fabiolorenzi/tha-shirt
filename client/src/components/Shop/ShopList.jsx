@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 import "./stylesheets/ShopList.css";
@@ -10,7 +11,7 @@ function ShopList() {
 
     function compiler() {
         const html = types.map(type => {
-            return <div><Type typeKey={type} /></div>
+            return <div><Link to={`/shop/type/${type.toLowerCase()}`}><Type typeKey={type} /></Link></div>
         });
         setTypesRendered(html);
     };

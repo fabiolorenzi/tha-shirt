@@ -1,0 +1,16 @@
+@import "../../shared/stylesheets/var.scss";
+@import "../../shared/stylesheets/openHiddenMenu.scss";
+
+.clContainer {
+    display: block;
+    width: 100%;
+    padding-top: 100px;
+    background-color: $color2;
+    z-index: 1;
+    padding-bottom: 100px;
+    @include closedHiddenMenuEffect;
+}
+
+#openCL {
+    @include openHiddenMenuEffect;
+}

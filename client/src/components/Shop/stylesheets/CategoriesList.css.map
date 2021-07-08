@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,YAAY,CAAC;EACT,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,IAAI;EACX,WAAW,EAAE,KAAK;EAClB,gBAAgB,ECNX,OAAO;EDOZ,OAAO,EAAE,CAAC;EACV,cAAc,EAAE,KAAK;EEHrB,MAAM,EAAE,gBAAgB;EACxB,mBAAmB,EAAE,IAAI;CFI5B;;AAED,AAAA,OAAO,CAAC;EEZJ,MAAM,EAAE,eAAe;EACvB,mBAAmB,EAAE,IAAI;CFa5B",
+    "sources": [
+        "CategoriesList.scss",
+        "../../shared/stylesheets/var.scss",
+        "../../shared/stylesheets/openHiddenMenu.scss"
+    ],
+    "names": [],
+    "file": "CategoriesList.css"
+}

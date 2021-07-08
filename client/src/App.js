@@ -10,6 +10,7 @@ import AboutUs from "./components/AboutUs/AboutUs.jsx";
 import Contacts from "./components/Contacts/Contacts.jsx";
 import ManagmentArea from "./components/ManagmentArea/ManagmentArea.jsx";
 import Shop from "./components/Shop/Shop.jsx";
+import CategoriesList from "./components/Shop/CategoriesList.jsx";
 import Error from "./components/Error/Error.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 
@@ -22,6 +23,7 @@ function App() {
                 <Route exact path="/" component={Home} />
                 <Route path="/login" component={LoginArea} />
                 <Route exact path="/shop" component={Shop} />
+                <Route exact path="/shop/type/:type" component={CategoriesList} />
                 <Route path="/account" component={Account} />
                 <Route path="/aboutus" component={AboutUs} />
                 <Route path="/contacts" component={Contacts} />
