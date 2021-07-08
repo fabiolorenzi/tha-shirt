@@ -44,6 +44,7 @@ function CategoriesList(props) {
 
     return(
         <div className="clContainer" data-testid="clContainer">
+            <Link to="/shop"><button data-testid="buttonReturn">Back</button></Link>
             <h1 data-testid="clTitle">Our categories of {titleType.slice(-1) === "s" ? titleType : titleType + "s"}</h1>
             <div className="slBody" data-testid="slBody">
                 {catRendered}
