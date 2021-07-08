@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import "./stylesheets/Type.css";
+import "./stylesheets/Category.css";
 
-function Type({typeKey}) {
+function Category({typeKey, catKey}) {
     const [image, setImage] = useState("");
 
     useEffect(() => {
         axios.get("http://localhost:8082/api/products/")
             .then(res => {
                 for (let i = 0; i < res.data.length; i++) {
-                    if (res.data[i].type === typeKey) {
+                    if (res.data[i].type === typeKey && res.data[i].category === catKey) {
                         setImage(res.data[i].image);
                         break;
                     }
@@ -21,11 +21,11 @@ function Type({typeKey}) {
     }, []);
 
     return(
-        <div className="typeContainer" data-testid="typeContainer">
-            <img src={"data:image/png;base64," + image} alt="type" />
-            <h2>{typeKey.slice(-1) === "s" ? typeKey : typeKey + "s"}</h2>
+        <div className="catContainer" data-testid="catContainer">
+            <img src={"data:image/png;base64," + image} alt="category" />
+            <h2>{catKey.slice(-1) === "s" ? catKey : catKey + "s"}</h2>
         </div>
     );
 };
 
-export default Type;
+export default Category;
