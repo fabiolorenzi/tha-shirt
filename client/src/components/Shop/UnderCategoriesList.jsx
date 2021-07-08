@@ -5,6 +5,7 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 
 import "./stylesheets/UnderCategoriesList.css";
+import UnderCategory from "./UnderCategory.jsx";
 
 function UnderCategoriesList(props) {
     const [undCatRendered, setUndCatRendered] = useState();
@@ -22,6 +23,7 @@ function UnderCategoriesList(props) {
             return(
                 <div>
                     <Link to={`/shop/${props.match.params.type}/${props.match.params.category}/${underCategory.toLowerCase()}`}>
+                        <UnderCategory typeKey={undCatType} catKey={undCatCat} undCatKey={underCategory} />
                     </Link>
                 </div>
             );
