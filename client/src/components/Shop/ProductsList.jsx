@@ -4,9 +4,12 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 
 import "./stylesheets/ProductsList.css";
+import Product from "./Product.jsx";
 
 function ProductsList(props) {
     const [prodRendered, setProdRendered] = useState();
+    let prodType = "";
+    let prodCat = "";
     let prodUndCat = "";
     const [titleType, setTitleType] = useState("");
     let products = [];
@@ -20,6 +23,7 @@ function ProductsList(props) {
             return(
                 <div>
                     <Link to={`/shop/${props.match.params.type}/${props.match.params.category}/${props.match.params.underCategory}/${product.id}`}>
+                        <Product typeKey={prodType} catKey={prodCat} undCatKey={prodUndCat} id={product.id} />
                     </Link>
                 </div>
             );
@@ -34,9 +38,13 @@ function ProductsList(props) {
                     if (res.data[i].type.toLowerCase() === props.match.params.type
                         && res.data[i].category.toLowerCase() === props.match.params.category
                         && res.data[i].underCategory.toLowerCase() === props.match.params.underCategory
-                        && !products.includes(res.data[i].underCategory))
+                        && !products.includes(res.data[i].id))
                     {
                         products.push(res.data[i]);
+                        // eslint-disable-next-line react-hooks/exhaustive-deps
+                        prodType = res.data[i].type;
+                        // eslint-disable-next-line react-hooks/exhaustive-deps
+                        prodCat = res.data[i].category;
                         // eslint-disable-next-line react-hooks/exhaustive-deps
                         prodUndCat = res.data[i].underCategory;
                     }
