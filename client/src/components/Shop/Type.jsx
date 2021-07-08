@@ -21,7 +21,7 @@ function Type({typeKey}) {
     }, []);
 
     return(
-        <div className="typeContainer">
+        <div className="typeContainer" data-testid="typeContainer">
             <img src={"data:image/png;base64," + image} alt="type" />
             <h2>{typeKey + "s"}</h2>
         </div>
