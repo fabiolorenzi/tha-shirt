@@ -19,11 +19,11 @@ function ProductsList(props) {
     const openBurger = burgerState ? "openUCL" : "";
 
     function compiler() {
-        const html = products.map(product => {
+        const html = products.map(prod => {
             return(
                 <div>
-                    <Link to={`/shop/${props.match.params.type}/${props.match.params.category}/${props.match.params.underCategory}/${product.id}`}>
-                        <Product typeKey={prodType} catKey={prodCat} undCatKey={prodUndCat} id={product.id} />
+                    <Link to={`/shop/${props.match.params.type}/${props.match.params.category}/${props.match.params.underCategory}/${prod._id}`}>
+                        <Product typeKey={prodType} catKey={prodCat} undCatKey={prodUndCat} id={prod._id} />
                     </Link>
                 </div>
             );
@@ -38,7 +38,7 @@ function ProductsList(props) {
                     if (res.data[i].type.toLowerCase() === props.match.params.type
                         && res.data[i].category.toLowerCase() === props.match.params.category
                         && res.data[i].underCategory.toLowerCase() === props.match.params.underCategory
-                        && !products.includes(res.data[i].id))
+                        && !products.includes(res.data[i]._id))
                     {
                         products.push(res.data[i]);
                         // eslint-disable-next-line react-hooks/exhaustive-deps
