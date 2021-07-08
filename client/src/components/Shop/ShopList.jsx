@@ -11,7 +11,7 @@ function ShopList() {
 
     function compiler() {
         const html = types.map(type => {
-            return <div><Link to={`/shop/type/${type.toLowerCase()}`}><Type typeKey={type} /></Link></div>
+            return <div><Link to={`/shop/${type.toLowerCase()}`}><Type typeKey={type} /></Link></div>
         });
         setTypesRendered(html);
     };
