@@ -11,12 +11,23 @@
           transition-duration: 0.5s;
 }
 
+.clContainer a {
+  text-decoration: none;
+}
+
+.clContainer a button {
+  display: block;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 3px;
+}
+
 .clContainer h1 {
   font-size: 30px;
   font-style: italic;
   letter-spacing: 1px;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 #openCL {
@@ -45,7 +56,8 @@
 
 @media only screen and (max-width: 400px) {
   .clContainer h1 {
-    font-size: 25px;
+    font-size: 20px;
+    margin-bottom: 30px;
   }
 }
 /*# sourceMappingURL=CategoriesList.css.map */

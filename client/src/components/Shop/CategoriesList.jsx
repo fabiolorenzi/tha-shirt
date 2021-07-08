@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 import "./stylesheets/CategoriesList.css";
 import Category from "./Category.jsx";
@@ -10,6 +11,10 @@ function CategoriesList(props) {
     let catType = "";
     const [titleType, setTitleType] = useState("");
     let cats = [];
+
+    const burgerState = useSelector(state => state.burgerButtonState);
+
+    const openBurger = burgerState ? "openCL" : "";
 
     function compiler() {
         const html = cats.map(category => {
@@ -43,7 +48,7 @@ function CategoriesList(props) {
     }, []);
 
     return(
-        <div className="clContainer" data-testid="clContainer">
+        <div className="clContainer" data-testid="clContainer" id={openBurger}>
             <Link to="/shop"><button data-testid="buttonReturn">Back</button></Link>
             <h1 data-testid="clTitle">Our categories of {titleType.slice(-1) === "s" ? titleType : titleType + "s"}</h1>
             <div className="slBody" data-testid="slBody">
