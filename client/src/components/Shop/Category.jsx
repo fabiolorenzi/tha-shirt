@@ -23,7 +23,7 @@ function Category({typeKey, catKey}) {
     return(
         <div className="catContainer" data-testid="catContainer">
             <img src={"data:image/png;base64," + image} alt="category" />
-            <h2>{catKey.slice(-1) === "s" ? catKey : catKey + "s"}</h2>
+            <h2>{catKey.slice(-1) === "s" || catKey === "Music" ? catKey : catKey + "s"}</h2>
         </div>
     );
 };
