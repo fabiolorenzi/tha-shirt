@@ -3,31 +3,28 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useSelector } from "react-redux";
 
-import "./stylesheets/UnderCategoriesList.css";
-import UnderCategory from "./UnderCategory.jsx";
+import "./stylesheets/ProductsList.css";
 
-function UnderCategoriesList(props) {
-    const [undCatRendered, setUndCatRendered] = useState();
-    let undCatType = "";
-    let undCatCat = "";
+function ProductsList(props) {
+    const [prodRendered, setProdRendered] = useState();
+    let prodUndCat = "";
     const [titleType, setTitleType] = useState("");
-    let undCats = [];
+    let products = [];
 
     const burgerState = useSelector(state => state.burgerButtonState);
 
     const openBurger = burgerState ? "openUCL" : "";
 
     function compiler() {
-        const html = undCats.map(underCategory => {
+        const html = products.map(product => {
             return(
                 <div>
-                    <Link to={`/shop/${props.match.params.type}/${props.match.params.category}/${underCategory.toLowerCase()}`}>
-                        <UnderCategory typeKey={undCatType} catKey={undCatCat} undCatKey={underCategory} />
+                    <Link to={`/shop/${props.match.params.type}/${props.match.params.category}/${props.match.params.underCategory}/${product.id}`}>
                     </Link>
                 </div>
             );
         });
-        setUndCatRendered(html);
+        setProdRendered(html);
     };
 
     useEffect(() => {      
@@ -36,17 +33,16 @@ function UnderCategoriesList(props) {
                 for (let i = 0; i < res.data.length; i++) {
                     if (res.data[i].type.toLowerCase() === props.match.params.type
                         && res.data[i].category.toLowerCase() === props.match.params.category
-                        && !undCats.includes(res.data[i].underCategory))
+                        && res.data[i].underCategory.toLowerCase() === props.match.params.underCategory
+                        && !products.includes(res.data[i].underCategory))
                     {
-                        undCats.push(res.data[i].underCategory);
+                        products.push(res.data[i]);
                         // eslint-disable-next-line react-hooks/exhaustive-deps
-                        undCatType = res.data[i].type;
-                        // eslint-disable-next-line react-hooks/exhaustive-deps
-                        undCatCat = res.data[i].category;
+                        prodUndCat = res.data[i].underCategory;
                     }
                 }
                 compiler();
-                setTitleType(undCatCat);
+                setTitleType(prodUndCat);
             })
             .catch(err => console.log(err));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -54,13 +50,13 @@ function UnderCategoriesList(props) {
 
     return(
         <div className="uclContainer" data-testid="uclContainer" id={openBurger}>
-            <Link to={`/shop/${props.match.params.type}`}><button data-testid="buttonReturn">Back</button></Link>
-            <h1 data-testid="uclTitle">Our {titleType.slice(-1) === "s" || titleType === "Music" ? titleType : titleType + "s"}</h1>
+            <Link to={`/shop/${props.match.params.type}/${props.match.params.category}`}><button data-testid="buttonReturn">Back</button></Link>
+            <h1 data-testid="uclTitle">{titleType}</h1>
             <div className="uclBody" data-testid="uclBody">
-                {undCatRendered}
+                {prodRendered}
             </div>
         </div>
     );
 };
 
-export default UnderCategoriesList;
+export default ProductsList;
