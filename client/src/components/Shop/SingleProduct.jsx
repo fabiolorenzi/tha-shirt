@@ -6,6 +6,9 @@ import { useSelector } from "react-redux";
 import "./stylesheets/SingleProduct.css";
 
 function SingleProduct(props) {
+
+    //--------------------STATES--------------------
+
     const history = useHistory();
     const [product, setProduct] = useState({
         name: "",
@@ -28,6 +31,18 @@ function SingleProduct(props) {
     const openBurger = burgerState ? "openSingleProduct" : "";
 
     const passMan = localStorage.getItem("pass") ? "" : "passMan";
+
+    const [newProd, setNewProd] = useState({
+        name: product.name,
+        type: product.type,
+        category: product.category,
+        underCategory: product.underCategory,
+        colour: product.colour,
+        description: product.description,
+        price: product.price
+    });
+
+    //--------------------FUNCTIONS--------------------
 
     useEffect(() => {
         axios.get("http://localhost:8082/api/products/" + props.match.params.id)
@@ -58,6 +73,15 @@ function SingleProduct(props) {
         } else {
             setPrice(product.price + "£");
         };
+        setNewProd({
+            name: product.name,
+            type: product.type,
+            category: product.category,
+            underCategory: product.underCategory,
+            colour: product.colour,
+            description: product.description,
+            price: product.price
+        });
     }, [product]);
 
     function handleChange(e) {
@@ -105,6 +129,35 @@ function SingleProduct(props) {
             .catch(err => console.log(err));
     };
 
+    const newProdChange = e => {
+        e.preventDefault();
+        setNewProd({...newProd, [e.target.name]: e.target.value});
+    };
+
+    const modifyItem = e => {
+        e.preventDefault();
+        const data = {
+            name: newProd.name,
+            type: newProd.type,
+            category: newProd.category,
+            underCategory: newProd.underCategory,
+            colour: newProd.colour,
+            description: newProd.description,
+            price: newProd.price,
+            published_date: product.published_date,
+            update_date: new Date(),
+            image: product.image,
+        };
+        axios.put("http://localhost:8082/api/products/" + props.match.params.id, data)
+            .then(res => {
+                alert("Data updated successfully!");
+                window.location.reload();
+            })
+            .catch(err => alert("Not possible to update the data. Please try again."));
+    };
+
+    //--------------------RETURN--------------------
+
     return(
         <div className="singleProdContainer" id={openBurger}>
             <Link to={`/shop/${props.match.params.type}/${props.match.params.category}/${props.match.params.underCategory}`}><button data-testid="buttonReturn">Back</button></Link>
@@ -133,7 +186,42 @@ function SingleProduct(props) {
                         <h3>Category: {product.underCategory} {product.category}</h3>
                         <h3>Colour: {product.colour}</h3>
                     </div>
-                    <button className={passMan} id="removeBtn" onClick={removeItem}>Remove</button>
+                    <div className={passMan}>
+                        <div>
+                            <form onSubmit={modifyItem}>
+                                <div>
+                                    <label htmlFor="name" data-testid="createProdLabelName">Name</label>
+                                    <input type="text" name="name" value={newProd.name} onChange={newProdChange} />
+                                </div>
+                                <div>
+                                    <label htmlFor="type">Type</label>
+                                    <input type="text" name="type" value={newProd.type} onChange={newProdChange} />
+                                </div>
+                                <div>
+                                    <label htmlFor="category">Category</label>
+                                    <input type="text" name="category" value={newProd.category} onChange={newProdChange} />
+                                </div>
+                                <div>
+                                    <label htmlFor="underCategory">UnderCategory</label>
+                                    <input type="text" name="underCategory" value={newProd.underCategory} onChange={newProdChange} />
+                                </div>
+                                <div>
+                                    <label htmlFor="colour">Colour</label>
+                                    <input type="text" name="colour" value={newProd.colour} onChange={newProdChange} />
+                                </div>
+                                <div className="descriptionDiv">
+                                    <label htmlFor="descrition">Description</label>
+                                    <textarea name="description" value={newProd.description} className="descriptionArea" onChange={newProdChange} />
+                                </div>
+                                <div>
+                                    <label htmlFor="price">Price</label>
+                                    <input type="text" name="price" value={newProd.price} onChange={newProdChange} />
+                                </div>
+                                <button type="submit">Modify</button>    
+                            </form>
+                        </div>
+                        <button id="removeBtn" onClick={removeItem}>Remove</button>
+                    </div>
                 </div>
             </div>
         </div>
