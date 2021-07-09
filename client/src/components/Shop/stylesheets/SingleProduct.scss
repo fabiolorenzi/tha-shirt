@@ -115,11 +115,61 @@
     display: none !important;
 }
 
+#spReservedArea {
+    display: block;
+    width: 340px;
+    border: 1px solid $color1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 50px auto 0 !important;
+    form {
+        div {
+            display: block;
+            margin-bottom: 20px;
+            input,
+            textarea {
+                float: right;
+                margin-top: -3px;
+            }
+            textarea {
+                vertical-align: top;
+                width: 208.5px !important;
+                height: 150px;
+            }
+        }
+        button {
+            margin-left: 235px;
+            border: 1px solid $color1;
+            border-radius: 3px;
+            background-color: $color3;
+            color: $color1;
+            font-weight: 600;
+            padding: 5px 20px;
+            transition-duration: 0.3s;
+        }
+        button:hover {
+            color: $color2;
+            background-color: $color1;
+            transition-duration: 0.3s;
+        }
+    }
+}
+
 #removeBtn {
-    background-color: $color4;
-    color: $color2;
+    background-color: $color4 !important;
+    color: $color2 !important;
     border: 1px solid $color1;
     border-radius: 3px;
+    transition-duration: 0.3s;
+    margin-top: 10px;
+}
+
+#modifyBtn {
+    background-color: $color3;
+    color: $color1;
+    border: 1px solid $color1;
+    border-radius: 3px;
+    transition-duration: 0.3s;
 }
 
 @media only screen and (max-width: 870px) {
@@ -185,6 +235,32 @@
         width: 95%;
         h3 {
             font-size: 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #spReservedArea {
+        width: 300px;
+        form {
+            div {
+                label {
+                    font-size: 12px;
+                }
+                input,
+                textarea {
+                    float: right;
+                    margin-top: -3px;
+                }
+                textarea {
+                    vertical-align: top;
+                    width: 208.5px !important;
+                    height: 150px;
+                }
+            }
+            button {
+                margin-left: 200px;
+            }
         }
     }
 }

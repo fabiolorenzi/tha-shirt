@@ -186,7 +186,7 @@ function SingleProduct(props) {
                         <h3>Category: {product.underCategory} {product.category}</h3>
                         <h3>Colour: {product.colour}</h3>
                     </div>
-                    <div className={passMan}>
+                    <div className={passMan} id="spReservedArea">
                         <div>
                             <form onSubmit={modifyItem}>
                                 <div>
@@ -217,10 +217,10 @@ function SingleProduct(props) {
                                     <label htmlFor="price">Price</label>
                                     <input type="text" name="price" value={newProd.price} onChange={newProdChange} />
                                 </div>
-                                <button type="submit">Modify</button>    
+                                <button id="modifyBtn" type="submit">Modify</button>
+                                <button id="removeBtn" onClick={removeItem}>Remove</button>  
                             </form>
                         </div>
-                        <button id="removeBtn" onClick={removeItem}>Remove</button>
                     </div>
                 </div>
             </div>
