@@ -65,20 +65,21 @@ function SingleProduct(props) {
 
     function insertProduct(e) {
         e.preventDefault();
-        let couple = [product.id, counter];
+        let couple = [product.id, counter, product.name, product.price, product.image];
         let basket = JSON.parse(localStorage.getItem("basket")) || [];
         let temp = 0;
         for (let i = 0; i < basket.length; i++) {
             if (basket[i][0] === product.id) {
                 basket[i][1] = counter;
                 temp++;
-                break
+                break;
             }
         };
         if (temp === 0) {
             basket.push(couple);
         };
         localStorage.setItem("basket", JSON.stringify(basket));
+        alert("Item added to the basket!");
         history.push(`/shop/${props.match.params.type}/${props.match.params.category}/${props.match.params.underCategory}`);
     };
 
@@ -97,10 +98,24 @@ function SingleProduct(props) {
                         <img src={`data:image/png;base64,` + product.image} alt="product" />
                     </div>
                     <div className="singleProdBuy">
-                        <h2>Price: {price}</h2>
-                        <label htmlFor="counter">Number</label>
-                        <input type="number" name="counter" value={counter} onChange={handleChange} />
-                        <button className="insertButton" onClick={reloader}>Add to basket</button>
+                        <div>
+                            <h2>Price: {price}</h2>
+                            <label htmlFor="counter">Number Items:</label>
+                            <input type="number" name="counter" min="1" max="100" value={counter} onChange={handleChange} />
+                            <button className="insertButton" onClick={reloader}>Add to basket</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="singleProdSecondPart">
+                    <div className="singleProdDescription">
+                        <p>{product.description}</p>
+                    </div>
+                    <div className="singleProdInfo">
+                        <h3>Name: {product.name}</h3>
+                        <h3>Type: {product.type}</h3>
+                        <h3>Category: {product.category}</h3>
+                        <h3>Under category: {product.underCategory}</h3>
+                        <h3>Colour: {product.colour}</h3>
                     </div>
                 </div>
             </div>
