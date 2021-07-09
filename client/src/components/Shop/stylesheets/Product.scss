@@ -3,110 +3,40 @@
 
 .productContainer {
     display: block;
-    width: 100%;
-    border: 2px solid $color1;
-    border-radius: 10px;
+    text-align: center;
+    margin: 25px;
+    width: 250px;
+    height: 430px;
     background-color: #dddddd;
-    margin-bottom: 50px;
-    div {
-        padding: 5px;
-        div {
-            display: inline-block;
-        }
-    }
-}
-
-.productLeft {
-    width: 30%;
+    border: 1px solid $color1;
+    border-radius: 5px;
+    padding: 10px;
     img {
-        display: block;
         width: 200px;
-        margin: auto;
+        margin-bottom: 20px;
         border-radius: 5px;
     }
-}
-
-.productRight {
-    width: 60%;
-    vertical-align: top;
     h2 {
-        text-align: center;
-        margin-top: 15px;
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 400;
+        height: 60px;
     }
     p {
-        text-align: center;
-        margin-top: 30px;
         font-size: 18px;
+        height: 60px;
     }
     h3 {
-        margin-top: 40px;
-        text-align: right;
-    }
-}
-
-@media only screen and (max-width: 850px) {
-    .productContainer {
-        margin: 0 auto 50px;
-    }
-    .productLeft {
-        width: fit-content;
-    }
-    .productRight {
-        h2 {
-            font-size: 25px;
-        }
-        p {
-            font-size: 15px;
-        }
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .productRight {
-        h2 {
-            font-size: 22px;
-        }
-        p {
-            font-size: 15px;
-        }
+        font-size: 20px;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .productLeft {
+    .productContainer {
         img {
-            width: 120px;
+            width: 150px;
         }
-    }
-    .productRight {
         h2 {
-            font-size: 21px;
-            margin-top: 5px;
-        }
-        p {
-            font-size: 14px;
-            margin-top: 5px;
-        }
-        h3 {
-            font-size: 15px;
-            margin-top: 10px;
-        }
-    }
-}
-
-@media only screen and (max-width: 370px) {
-    .productLeft {
-        img {
-            width: 120px;
-        }
-    }
-
-    .productRight {
-        width: 50%;
-        h2 {
-            font-size: 19px;
+            font-size: 24px;
         }
     }
 }

@@ -1,107 +1,42 @@
 .productContainer {
   display: block;
-  width: 100%;
-  border: 2px solid #000000;
-  border-radius: 10px;
+  text-align: center;
+  margin: 25px;
+  width: 250px;
+  height: 430px;
   background-color: #dddddd;
-  margin-bottom: 50px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 10px;
 }
 
-.productContainer div {
-  padding: 5px;
-}
-
-.productContainer div div {
-  display: inline-block;
-}
-
-.productLeft {
-  width: 30%;
-}
-
-.productLeft img {
-  display: block;
+.productContainer img {
   width: 200px;
-  margin: auto;
+  margin-bottom: 20px;
   border-radius: 5px;
 }
 
-.productRight {
-  width: 60%;
-  vertical-align: top;
-}
-
-.productRight h2 {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 30px;
+.productContainer h2 {
+  font-size: 25px;
   font-weight: 400;
+  height: 60px;
 }
 
-.productRight p {
-  text-align: center;
-  margin-top: 30px;
+.productContainer p {
   font-size: 18px;
+  height: 60px;
 }
 
-.productRight h3 {
-  margin-top: 40px;
-  text-align: right;
-}
-
-@media only screen and (max-width: 850px) {
-  .productContainer {
-    margin: 0 auto 50px;
-  }
-  .productLeft {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  .productRight h2 {
-    font-size: 25px;
-  }
-  .productRight p {
-    font-size: 15px;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .productRight h2 {
-    font-size: 22px;
-  }
-  .productRight p {
-    font-size: 15px;
-  }
+.productContainer h3 {
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 600px) {
-  .productLeft img {
-    width: 120px;
+  .productContainer img {
+    width: 150px;
   }
-  .productRight h2 {
-    font-size: 21px;
-    margin-top: 5px;
-  }
-  .productRight p {
-    font-size: 14px;
-    margin-top: 5px;
-  }
-  .productRight h3 {
-    font-size: 15px;
-    margin-top: 10px;
-  }
-}
-
-@media only screen and (max-width: 370px) {
-  .productLeft img {
-    width: 120px;
-  }
-  .productRight {
-    width: 50%;
-  }
-  .productRight h2 {
-    font-size: 19px;
+  .productContainer h2 {
+    font-size: 24px;
   }
 }
 /*# sourceMappingURL=Product.css.map */
