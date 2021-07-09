@@ -117,8 +117,7 @@ function SingleProduct(props) {
                     <div className="singleProdInfo">
                         <h3>Name: {product.name}</h3>
                         <h3>Type: {product.type}</h3>
-                        <h3>Category: {product.category}</h3>
-                        <h3>Under category: {product.underCategory}</h3>
+                        <h3>Category: {product.underCategory} {product.category}</h3>
                         <h3>Colour: {product.colour}</h3>
                     </div>
                 </div>
