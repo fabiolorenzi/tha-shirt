@@ -65,22 +65,26 @@ function SingleProduct(props) {
 
     function insertProduct(e) {
         e.preventDefault();
-        let couple = [product.id, counter, product.name, product.price, product.image];
-        let basket = JSON.parse(localStorage.getItem("basket")) || [];
-        let temp = 0;
-        for (let i = 0; i < basket.length; i++) {
-            if (basket[i][0] === product.id) {
-                basket[i][1] = counter;
-                temp++;
-                break;
-            }
+        if (localStorage.getItem("logged")) {
+            let couple = [product.id, counter, product.name, product.price, product.image];
+            let basket = JSON.parse(localStorage.getItem("basket")) || [];
+            let temp = 0;
+            for (let i = 0; i < basket.length; i++) {
+                if (basket[i][0] === product.id) {
+                    basket[i][1] = counter;
+                    temp++;
+                    break;
+                }
+            };
+            if (temp === 0) {
+                basket.push(couple);
+            };
+            localStorage.setItem("basket", JSON.stringify(basket));
+            alert("Item added to the basket!");
+            history.push(`/shop/${props.match.params.type}/${props.match.params.category}/${props.match.params.underCategory}`);
+        } else {
+            history.push("/login");
         };
-        if (temp === 0) {
-            basket.push(couple);
-        };
-        localStorage.setItem("basket", JSON.stringify(basket));
-        alert("Item added to the basket!");
-        history.push(`/shop/${props.match.params.type}/${props.match.params.category}/${props.match.params.underCategory}`);
     };
 
     function reloader(e) {
