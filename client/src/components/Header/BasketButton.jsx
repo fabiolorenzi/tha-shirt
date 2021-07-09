@@ -19,12 +19,22 @@ function BasketButton() {
 
     return(
         <div className="basketButtonContainer" data-testid="basketButtonContainer">
-            <Link to="/checkout">
-                <div className="basket_button" data-testid="basket_button">
-                    <h3 data-testid="itemCounter">{itemCounter}</h3>
-                    <img src={basketIcon} alt="basket icon" />
-                </div>
-            </Link>
+            {localStorage.getItem("basket")
+                ?
+                    <Link to="/checkout">
+                        <div className="basket_button" data-testid="basket_button">
+                            <h3 data-testid="itemCounter">{itemCounter}</h3>
+                            <img src={basketIcon} alt="basket icon" />
+                        </div>
+                    </Link>
+                :   
+                    <Link onClick={() => alert("The basket is still empty. Please add some items to it.")}>
+                        <div className="basket_button" data-testid="basket_button">
+                            <h3 data-testid="itemCounter">{itemCounter}</h3>
+                            <img src={basketIcon} alt="basket icon" />
+                        </div>
+                    </Link>
+            }
         </div>
     );
 };
