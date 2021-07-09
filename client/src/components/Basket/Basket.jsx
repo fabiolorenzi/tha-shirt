@@ -32,9 +32,9 @@ function Basket() {
         compiler();
         let tot = 0;
         for (let i = 0; i < products.length; i++) {
-            tot += parseInt(products[i][3]);
+            tot += (parseFloat(products[i][3]) * parseInt(products[i][1]));
         };
-        setBill(tot);
+        setBill(tot.toFixed(2));
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [products]);
     
