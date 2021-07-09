@@ -26,16 +26,16 @@ function Basket() {
 
     useEffect(() => {
         setProducts(JSON.parse(localStorage.getItem("basket")));
-        compiler();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
+        compiler();
         let tot = 0;
         for (let i = 0; i < products.length; i++) {
             tot += parseInt(products[i][3]);
         };
         setBill(tot);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [products]);
     
     const cancelItem = (e, id) => {
