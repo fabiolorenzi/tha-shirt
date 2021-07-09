@@ -68,15 +68,6 @@ function SingleProduct(props) {
         let couple = [product.id, counter];
         let basket = JSON.parse(localStorage.getItem("basket")) || [];
         let temp = 0;
-        /*if (basket.includes(product.id)) {
-            for (let i = 0; i < basket.length; i++) {
-                if (basket[i][0] === product.id) {
-                    basket[i][1] = counter;
-                }
-            };
-        } else {
-            basket.push(couple);
-        };*/
         for (let i = 0; i < basket.length; i++) {
             if (basket[i][0] === product.id) {
                 basket[i][1] = counter;
@@ -89,6 +80,11 @@ function SingleProduct(props) {
         };
         localStorage.setItem("basket", JSON.stringify(basket));
         history.push(`/shop/${props.match.params.type}/${props.match.params.category}/${props.match.params.underCategory}`);
+    };
+
+    function reloader(e) {
+        insertProduct(e)
+        window.location.reload();
     };
 
     return(
@@ -104,7 +100,7 @@ function SingleProduct(props) {
                         <h2>Price: {price}</h2>
                         <label htmlFor="counter">Number</label>
                         <input type="number" name="counter" value={counter} onChange={handleChange} />
-                        <button className="insertButton" onClick={insertProduct}>Add to basket</button>
+                        <button className="insertButton" onClick={reloader}>Add to basket</button>
                     </div>
                 </div>
             </div>

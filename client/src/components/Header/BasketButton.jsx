@@ -5,11 +5,15 @@ import "./stylesheets/BasketButton.css";
 
 function BasketButton() {
     const [itemCounter, setItemCounter] = useState(0);
-    const position = localStorage.getItem("basket");
+    const position = JSON.parse(localStorage.getItem("basket"));
 
     useEffect(() => {
         if (localStorage.getItem("basket")) {
-            setItemCounter(position.length)
+            let tot = 0;
+            for (let i = 0; i < position.length; i++) {
+                tot += parseInt(position[i][1]);
+            };
+            setItemCounter(tot);
         };
     }, [position]);
 
