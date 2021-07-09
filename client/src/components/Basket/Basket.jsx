@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import "./stylesheets/Basket.css";
 
 function Basket() {
+    const burgerState = useSelector(state => state.burgerButtonState);
     const history = useHistory();
 
     const [products, setProducts] = useState([]);
@@ -14,10 +16,18 @@ function Basket() {
         const html = products.map(product => {
             return(
                 <div className="basketLine">
-                    <img src={"data:image/png;base64," + product[4]} alt="product" />
-                    <h3>{product[2]}</h3>
-                    <h3>{product[3]}{localStorage.getItem("currency")} * {product[1]}</h3>
-                    <button onClick={e => cancelItem(e, product[0])}>Remove</button>
+                    <div className="basketImg">
+                        <img src={"data:image/png;base64," + product[4]} alt="product" />
+                    </div>
+                    <div>
+                        <h3>{product[2]}</h3>
+                    </div>
+                    <div>
+                        <h3>{product[3]}{localStorage.getItem("currency")} * {product[1]}</h3>
+                    </div>
+                    <div className="basketBtn">
+                        <button onClick={e => cancelItem(e, product[0])}>Remove</button>
+                    </div>
                 </div>
             );
         });
@@ -72,14 +82,18 @@ function Basket() {
         window.location.reload();
     };
 
+    const openBurger = burgerState ? "openBasket" : "";
+
     return(
-        <div className="basketContainer">
+        <div className="basketContainer" id={openBurger}>
             <h1>Checkout</h1>
             <div className="basketList">
                 {basketList}
             </div>
-            <h1>{bill}{localStorage.getItem("currency")}</h1>
-            <button onClick={pay}>Pay</button>
+            <div className="lastPartBasket">
+                <h1>Total: {bill}{localStorage.getItem("currency")}</h1>
+                <button onClick={pay}>Pay</button>
+            </div>
         </div>
     );
 };
