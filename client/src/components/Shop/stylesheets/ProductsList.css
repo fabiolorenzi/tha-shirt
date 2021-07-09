@@ -38,20 +38,26 @@
 }
 
 .plBody {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 90%;
+  display: block;
+  width: 80%;
   margin: auto;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
 .plBody a {
   text-decoration: none;
   color: #000000;
+}
+
+@media only screen and (max-width: 700px) {
+  .plBody {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .plBody {
+    width: 98%;
+  }
 }
 
 @media only screen and (max-width: 400px) {

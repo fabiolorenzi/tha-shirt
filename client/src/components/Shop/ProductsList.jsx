@@ -57,10 +57,10 @@ function ProductsList(props) {
     }, []);
 
     return(
-        <div className="uclContainer" data-testid="uclContainer" id={openBurger}>
+        <div className="plContainer" id={openBurger}>
             <Link to={`/shop/${props.match.params.type}/${props.match.params.category}`}><button data-testid="buttonReturn">Back</button></Link>
-            <h1 data-testid="uclTitle">{titleType}</h1>
-            <div className="uclBody" data-testid="uclBody">
+            <h1>{titleType}</h1>
+            <div className="plBody">
                 {prodRendered}
             </div>
         </div>

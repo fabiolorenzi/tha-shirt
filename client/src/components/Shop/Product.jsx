@@ -16,6 +16,7 @@ function Product({typeKey, catKey, undCatKey, id}) {
         update_date: "",
         image: ""
     });
+    const [price, setPrice] = useState("");
 
     useEffect(() => {
         axios.get("http://localhost:8082/api/products/" + id)
@@ -35,10 +36,30 @@ function Product({typeKey, catKey, undCatKey, id}) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    useEffect(() => {
+        if (localStorage.getItem("currency" === "£")) {
+            setPrice(product.price + "£");
+        } else if (localStorage.getItem("currency") === "$") {
+            setPrice((parseInt(product.price) * 1.38) + "$");
+        } else if (localStorage.getItem("currency") === "€") {
+            setPrice((parseInt(product.price) * 1.16) + "€");
+        } else {
+            setPrice(product.price + "£");
+        };
+    }, [product]);
+
     return(
-        <div className="undCatContainer">
-            <img src={"data:image/png;base64," + product.image} alt="category" />
-            <h2>{product.name}</h2>
+        <div className="productContainer">
+            <div>
+                <div className="productLeft">
+                    <img src={"data:image/png;base64," + product.image} alt="category" />
+                </div>
+                <div className="productRight">
+                    <h2>{product.name}</h2>
+                    <p>{product.description}</p>
+                    <h3>Price: {price}</h3>
+                </div>
+            </div>
         </div>
     );
 };
