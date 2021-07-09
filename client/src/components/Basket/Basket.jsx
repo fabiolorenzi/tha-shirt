@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useHistory } from "react-router-dom";
 
 import "./stylesheets/Basket.css";
@@ -16,7 +16,7 @@ function Basket() {
                 <div className="basketLine">
                     <img src={"data:image/png;base64," + product[4]} alt="product" />
                     <h3>{product[2]}</h3>
-                    <h3>{product[3]} * {product[1]}</h3>
+                    <h3>{product[3]}{localStorage.getItem("currency")} * {product[1]}</h3>
                     <button onClick={e => cancelItem(e, product[0])}>Remove</button>
                 </div>
             );
@@ -24,8 +24,20 @@ function Basket() {
         setBasketList(html);
     };
 
+    let temp = useRef();
+
     useEffect(() => {
-        setProducts(JSON.parse(localStorage.getItem("basket")));
+        temp.current = (JSON.parse(localStorage.getItem("basket")));
+        if (localStorage.getItem("currency") === "€") {
+            for (let i = 0; i < temp.current.length; i++) {
+                temp.current[i][3] = (temp.current[i][3] * 1.16).toFixed(2);
+            };
+        } else if (localStorage.getItem("currency") === "$") {
+            for (let i = 0; i < temp.current.length; i++) {
+                temp.current[i][3] = (temp.current[i][3] * 1.38).toFixed(2);
+            };       
+        };
+        setProducts(temp.current);
     }, []);
 
     useEffect(() => {
@@ -66,7 +78,7 @@ function Basket() {
             <div className="basketList">
                 {basketList}
             </div>
-            <h1>{bill}</h1>
+            <h1>{bill}{localStorage.getItem("currency")}</h1>
             <button onClick={pay}>Pay</button>
         </div>
     );

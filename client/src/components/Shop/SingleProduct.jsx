@@ -64,7 +64,7 @@ function SingleProduct(props) {
     }, []);
 
     useEffect(() => {
-        if (localStorage.getItem("currency" === "£")) {
+        if (localStorage.getItem("currency") === "£") {
             setPrice(product.price + "£");
         } else if (localStorage.getItem("currency") === "$") {
             setPrice((parseInt(product.price) * 1.38) + "$");
