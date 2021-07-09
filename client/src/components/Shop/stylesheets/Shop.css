@@ -27,7 +27,7 @@
   font-size: 40px;
   letter-spacing: 0.2em;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .shopBody .shopLogo {
@@ -38,7 +38,7 @@
 .shopBody .shopLogo img {
   display: block;
   margin: auto;
-  width: 20%;
+  width: 12%;
 }
 
 @media only screen and (max-width: 650px) {
