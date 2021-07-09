@@ -111,6 +111,17 @@
     }
 }
 
+.passMan {
+    display: none !important;
+}
+
+#removeBtn {
+    background-color: $color4;
+    color: $color2;
+    border: 1px solid $color1;
+    border-radius: 3px;
+}
+
 @media only screen and (max-width: 870px) {
     .singleProdImage {
         width: 50%;

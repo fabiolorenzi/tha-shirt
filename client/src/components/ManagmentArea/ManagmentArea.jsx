@@ -27,7 +27,6 @@ function ManagmentArea() {
                     <div data-testid="createProdDiv" className="createProdDiv">
                         <CreateProduct />
                     </div>
-                    <div data-testid="modifyProdDiv" className="modifyProdDiv"></div>
                 </div>
             </div>
         </div>

@@ -27,6 +27,8 @@ function SingleProduct(props) {
 
     const openBurger = burgerState ? "openSingleProduct" : "";
 
+    const passMan = localStorage.getItem("pass") ? "" : "passMan";
+
     useEffect(() => {
         axios.get("http://localhost:8082/api/products/" + props.match.params.id)
             .then(res => setProduct({
@@ -92,6 +94,17 @@ function SingleProduct(props) {
         window.location.reload();
     };
 
+    function removeItem(e) {
+        e.preventDefault();
+        axios.delete("http://localhost:8082/api/products/" + props.match.params.id)
+            .then(res => {
+                alert("Item removed successfully.");
+                history.push(`/shop/${props.match.params.type}/${props.match.params.category}/${props.match.params.underCategory}`);
+                window.location.reload();
+            })
+            .catch(err => console.log(err));
+    };
+
     return(
         <div className="singleProdContainer" id={openBurger}>
             <Link to={`/shop/${props.match.params.type}/${props.match.params.category}/${props.match.params.underCategory}`}><button data-testid="buttonReturn">Back</button></Link>
@@ -120,6 +133,7 @@ function SingleProduct(props) {
                         <h3>Category: {product.underCategory} {product.category}</h3>
                         <h3>Colour: {product.colour}</h3>
                     </div>
+                    <button className={passMan} id="removeBtn" onClick={removeItem}>Remove</button>
                 </div>
             </div>
         </div>
