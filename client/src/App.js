@@ -14,6 +14,7 @@ import CategoriesList from "./components/Shop/CategoriesList.jsx";
 import UnderCategoriesList from "./components/Shop/UnderCategoriesList.jsx";
 import ProductsList from "./components/Shop/ProductsList.jsx";
 import SingleProduct from "./components/Shop/SingleProduct.jsx";
+import Basket from "./components/Basket/Basket.jsx";
 import Error from "./components/Error/Error.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 
@@ -33,6 +34,7 @@ function App() {
                 <Route path="/account" component={Account} />
                 <Route path="/aboutus" component={AboutUs} />
                 <Route path="/contacts" component={Contacts} />
+                <Route path="/checkout" component={Basket} />
                 <Route path="/managment-area" component={ManagmentArea} />
                 <Route component={Error} />
             </Switch>
