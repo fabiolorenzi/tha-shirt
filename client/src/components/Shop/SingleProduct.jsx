@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import "./stylesheets/SingleProduct.css";
 
 function SingleProduct(props) {
+    const history = useHistory();
     const [product, setProduct] = useState({
         name: "",
         type: "",
@@ -66,7 +67,8 @@ function SingleProduct(props) {
         e.preventDefault();
         let couple = [product.id, counter];
         let basket = JSON.parse(localStorage.getItem("basket")) || [];
-        if (basket.includes(product.id)) {
+        let temp = 0;
+        /*if (basket.includes(product.id)) {
             for (let i = 0; i < basket.length; i++) {
                 if (basket[i][0] === product.id) {
                     basket[i][1] = counter;
@@ -74,13 +76,24 @@ function SingleProduct(props) {
             };
         } else {
             basket.push(couple);
+        };*/
+        for (let i = 0; i < basket.length; i++) {
+            if (basket[i][0] === product.id) {
+                basket[i][1] = counter;
+                temp++;
+                break
+            }
+        };
+        if (temp === 0) {
+            basket.push(couple);
         };
         localStorage.setItem("basket", JSON.stringify(basket));
+        history.push(`/shop/${props.match.params.type}/${props.match.params.category}/${props.match.params.underCategory}`);
     };
 
     return(
         <div className="singleProdContainer" id={openBurger}>
-            <Link to={`/shop/${props.match.params.type}/${props.match.params.category}`}><button data-testid="buttonReturn">Back</button></Link>
+            <Link to={`/shop/${props.match.params.type}/${props.match.params.category}/${props.match.params.underCategory}`}><button data-testid="buttonReturn">Back</button></Link>
             <div className="singleProdBody">
                 <h1>{product.name}</h1>
                 <div className="singleProdFirstPart">
@@ -88,6 +101,7 @@ function SingleProduct(props) {
                         <img src={`data:image/png;base64,` + product.image} alt="product" />
                     </div>
                     <div className="singleProdBuy">
+                        <h2>Price: {price}</h2>
                         <label htmlFor="counter">Number</label>
                         <input type="number" name="counter" value={counter} onChange={handleChange} />
                         <button className="insertButton" onClick={insertProduct}>Add to basket</button>
