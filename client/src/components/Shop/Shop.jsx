@@ -7,9 +7,11 @@ import Logo from "../../img/tha-shirt-logo.png";
 
 import SearchBar from "./SearchBar.jsx";
 import ShopList from "./ShopList.jsx";
+import SearchList from "./SearchList.jsx";
 
 function Shop() {
     const burgerState = useSelector(state => state.burgerButtonState);
+    const searcher = useSelector(state => state.searcher);
 
     const openBurger = burgerState ? "openShop" : "closedShop";
 
@@ -27,9 +29,17 @@ function Shop() {
             <div className="searchBar" data-testid="searchBar">
                 <SearchBar /> 
             </div>
-            <div className="shopList" data-testid="shopList">
-                <ShopList />
-            </div>
+            {!searcher
+                ?
+                    <div className="shopList" data-testid="shopList">
+                        <ShopList />
+                    </div>
+                :
+                    <div className="shopList">
+                        <SearchList />
+                    </div>
+            }
+            
         </div>
     );
 };
