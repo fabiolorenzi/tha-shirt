@@ -11,7 +11,7 @@ function SearchedProd({prod}) {
     }, []);
 
     return(
-        <div className="spContainer">
+        <div className="sProdContainer">
             <img src={"data:image/png;base64," + product.image} alt="category" />
             <h2>{product.name}</h2>
         </div>

@@ -1,27 +1,21 @@
 @import "../../shared/stylesheets/var.scss";
-@import "../../shared/stylesheets/openHiddenMenu.scss";
 
-.spContainer {
+.sProdContainer {
     display: block;
-    text-align: center;
-    margin: 25px;
+    width: 250px;
+    height: 320px;
+    background-color: $color3;
+    padding: 10px;
+    border: 1px solid $color1;
+    border-radius: 5px;
+    margin-bottom: 40px;
     img {
         width: 200px;
-        margin-bottom: 20px;
+        border-radius: 5px;
+        margin-bottom: 10px;
     }
     h2 {
-        font-size: 25px;
-        font-weight: 400;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .spContainer {
-        img {
-            width: 150px;
-        }
-        h2 {
-            font-size: 24px;
-        }
+        width: 200px;
+        font-size: 18px;
     }
 }

@@ -1,25 +1,22 @@
-.spContainer {
+.sProdContainer {
   display: block;
-  text-align: center;
-  margin: 25px;
+  width: 250px;
+  height: 320px;
+  background-color: #ff9900;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  margin-bottom: 40px;
 }
 
-.spContainer img {
+.sProdContainer img {
   width: 200px;
-  margin-bottom: 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-.spContainer h2 {
-  font-size: 25px;
-  font-weight: 400;
-}
-
-@media only screen and (max-width: 600px) {
-  .spContainer img {
-    width: 150px;
-  }
-  .spContainer h2 {
-    font-size: 24px;
-  }
+.sProdContainer h2 {
+  width: 200px;
+  font-size: 18px;
 }
 /*# sourceMappingURL=SearchedProd.css.map */
