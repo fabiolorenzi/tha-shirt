@@ -4,29 +4,47 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 
 import "./stylesheets/SearchList.css";
-import Product from "./Product.jsx";
+import SearchedProd from "./SearchedProd.jsx";
 
 function SearchList() {
     const searchWord = useSelector(state => state.searchWord);
 
     const [listItems, setListItems] = useState([]);
-    let all = [];
+    const [searchProd, setSearchProd] = useState([]);
+
+    function compiler() {
+        const html = listItems.map(prod => {
+            return(
+                <div>
+                    <Link to={`/shop/search/${prod._id}`}>
+                        <SearchedProd prod={prod} />
+                    </Link>
+                </div>
+            );
+        });
+        setSearchProd(html);
+    };
 
     useEffect(() => {
         axios.get("http://localhost:8082/api/products")
-            .then(res => all.push(res.data))
+            .then(res => {
+                for (let i = 0; i < res.data.length; i++) {
+                    if (((res.data[i].name).toLowerCase()).includes(searchWord)) {
+                        let temp = listItems;
+                        temp.push(res.data[i]);
+                        setListItems(temp);
+                    };
+                };
+                compiler();
+            })
             .catch(err => console.log(err));
-        for (let i = 0; i < all.length; i++) {
-            if (all[i].name.includes(searchWord)) {
-                setListItems(listItems => [...listItems, all[i]]);
-            };
-        };
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return(
         <div className="searchListContainer">
             <h1>You searched: {searchWord}</h1>
+            {searchProd}
         </div>
     );
 };
