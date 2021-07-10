@@ -1,10 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAGA,AAAA,oBAAoB,CAAC;EACjB,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,IAAI;EACX,gBAAgB,ECLX,OAAO;EDMZ,UAAU,EAAE,IAAI;CAQnB;;AAZD,AAKI,oBALgB,CAKhB,EAAE,CAAC;EACC,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,MAAM;EAClB,cAAc,EAAE,GAAG;EACnB,UAAU,EAAE,MAAM;EAClB,aAAa,EAAE,IAAI;CACtB",
+    "mappings": "AAEA,AAAA,oBAAoB,CAAC;EACjB,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,MAAM;EAClB,UAAU,EAAE,IAAI;CAWnB;;AAfD,AAKI,oBALgB,CAKhB,EAAE,CAAC;EACC,SAAS,EAAE,IAAI;EACf,aAAa,EAAE,IAAI;CACtB;;AARL,AASI,oBATgB,CAShB,GAAG,CAAC;EACA,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,YAAY;CAChC",
     "sources": [
         "SearchList.scss",
-        "../../shared/stylesheets/var.scss",
-        "../../shared/stylesheets/openHiddenMenu.scss"
+        "../../shared/stylesheets/var.scss"
     ],
     "names": [],
     "file": "SearchList.css"

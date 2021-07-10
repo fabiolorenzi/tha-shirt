@@ -1,0 +1,25 @@
+.spContainer {
+  display: block;
+  text-align: center;
+  margin: 25px;
+}
+
+.spContainer img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.spContainer h2 {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 600px) {
+  .spContainer img {
+    width: 150px;
+  }
+  .spContainer h2 {
+    font-size: 24px;
+  }
+}
+/*# sourceMappingURL=SearchedProd.css.map */

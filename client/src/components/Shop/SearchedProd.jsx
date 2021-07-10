@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import "./stylesheets/Category.css";
+import "./stylesheets/SearchedProd.css";
 
 function SearchedProd({prod}) {
     const [product, setProduct] = useState([])
@@ -11,7 +11,7 @@ function SearchedProd({prod}) {
     }, []);
 
     return(
-        <div className="catContainer">
+        <div className="spContainer">
             <img src={"data:image/png;base64," + product.image} alt="category" />
             <h2>{product.name}</h2>
         </div>

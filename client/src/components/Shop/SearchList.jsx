@@ -16,7 +16,7 @@ function SearchList() {
         const html = listItems.map(prod => {
             return(
                 <div>
-                    <Link to={`/shop/search/${prod._id}`}>
+                    <Link to={`/shop/${prod.type}/${prod.category}/${prod.underCategory}/${prod._id}`}>
                         <SearchedProd prod={prod} />
                     </Link>
                 </div>
@@ -44,7 +44,7 @@ function SearchList() {
     return(
         <div className="searchListContainer">
             <h1>You searched: {searchWord}</h1>
-            {searchProd}
+            <div>{searchProd}</div>
         </div>
     );
 };
