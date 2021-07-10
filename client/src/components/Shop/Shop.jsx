@@ -35,7 +35,7 @@ function Shop() {
                         <ShopList />
                     </div>
                 :
-                    <div className="shopList">
+                    <div className="searchList">
                         <SearchList />
                     </div>
             }

@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { useSelector } from "react-redux";
+
+import "./stylesheets/SearchList.css";
+import Product from "./Product.jsx";
 
 function SearchList() {
+    const searchWord = useSelector(state => state.searchWord);
+
     return(
         <div className="searchListContainer">
-            <h1>Hello world</h1>
+            <h1>You searched: {searchWord}</h1>
         </div>
     );
 };

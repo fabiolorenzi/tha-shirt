@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { searcher } from "../../redux/actions/searcherAction.js";
+import { searchWord } from "../../redux/actions/searchWordAction.js";
 import "./stylesheets/SearchBar.css";
 
 function SearchBar() {
@@ -26,6 +27,7 @@ function SearchBar() {
     function searchItems(e) {
         e.preventDefault();
         dispatch(searcher(true));
+        dispatch(searchWord(search));
         searchedProd = [];
         prods.forEach(prod => {
             if (prod.name.toLowerCase().includes(search.toLowerCase())) {
@@ -37,6 +39,7 @@ function SearchBar() {
     const emptySearch = e => {
         e.preventDefault();
         dispatch(searcher(false));
+        dispatch(searchWord(""));
         setSearch("");
     };
 
