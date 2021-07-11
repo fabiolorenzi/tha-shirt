@@ -40,9 +40,9 @@ function Product({typeKey, catKey, undCatKey, id}) {
         if (localStorage.getItem("currency" === "£")) {
             setPrice(product.price + "£");
         } else if (localStorage.getItem("currency") === "$") {
-            setPrice((parseInt(product.price) * 1.38) + "$");
+            setPrice(((parseInt(product.price) * 1.38).toFixed(2)) + "$");
         } else if (localStorage.getItem("currency") === "€") {
-            setPrice((parseInt(product.price) * 1.16) + "€");
+            setPrice(((parseInt(product.price) * 1.16).toFixed(2)) + "€");
         } else {
             setPrice(product.price + "£");
         };
